@@ -1,0 +1,3 @@
+# Project exclude paths
+/supbuilder-common/target/
+/supbuilder-db/target/
