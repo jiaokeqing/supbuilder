@@ -1,4 +1,4 @@
-package com.supbuilder.common.utils;
+package com.supbuilder.common.utils.file;
 
 import com.artofsolving.jodconverter.DefaultDocumentFormatRegistry;
 import com.artofsolving.jodconverter.DocumentConverter;
@@ -15,9 +15,7 @@ import java.net.URLConnection;
 
 /**
  * 文件格式转换工具类
- *
- * @version 1.0
- * @since JDK1.8
+ * @author jiaokeqing
  */
 public class FileConvertUtil {
     /** 默认转换后文件后缀 */
