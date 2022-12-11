@@ -17,6 +17,12 @@
     </properties>
 
     <dependencies>
+
+        <dependency>
+            <groupId>com.supbuilder</groupId>
+            <artifactId>supbuilder-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
         <!-- spring web框架 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

@@ -135,6 +135,12 @@
             </exclusions>
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>${springboot-web.version}</version>
+        </dependency>
+
 
     </dependencies>
 
