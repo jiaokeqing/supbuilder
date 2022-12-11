@@ -2,10 +2,10 @@
 
 # 超级创作
 
-ProjectName and Description
+🌩最全面的办公辅助工具⚡️supbuilder
 
 <!-- PROJECT SHIELDS -->
-
+[![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
@@ -156,6 +156,7 @@ supbuilder
 - [Animate.css](https://daneden.github.io/animate.css)
 
 <!-- links -->
+<!-- links -->
 [your-project-path]:jiaokeqing/supbuilder
 [contributors-shield]: https://img.shields.io/github/contributors/jiaokeqing/supbuilder.svg?style=flat-square
 [contributors-url]: https://github.com/jiaokeqing/supbuilder/graphs/contributors
@@ -164,11 +165,10 @@ supbuilder
 [stars-shield]: https://img.shields.io/github/stars/jiaokeqing/supbuilder.svg?style=flat-square
 [stars-url]: https://github.com/jiaokeqing/supbuilder/stargazers
 [issues-shield]: https://img.shields.io/github/issues/jiaokeqing/supbuilder.svg?style=flat-square
-[issues-url]: https://img.shields.io/github/issues/jiaokeqing/supbuilder.svg
+[issues-url]: https://github.com/jiaokeqing/supbuilder/issues
 [license-shield]: https://img.shields.io/github/license/jiaokeqing/supbuilder.svg?style=flat-square
-[license-url]: https://github.com/jiaokeqing/supbuilder/LICENSE.txt
-
-
-
+[license-url]: https://github.com/jiaokeqing/supbuilder/blob/640e857a3ee82ebaf13fe9d18698940c1f548fe1/LICENSE
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/shaojintian
 
 
