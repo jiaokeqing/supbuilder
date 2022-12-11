@@ -6,8 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="supbuilder-wx" />
         <module name="supbuilder-common" />
         <module name="supbuilder-db" />
+        <module name="supbuilder-core" />
       </profile>
     </annotationProcessing>
   </component>

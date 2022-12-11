@@ -12,6 +12,8 @@
 
         <module>supbuilder-common</module>
         <module>supbuilder-db</module>
+        <module>supbuilder-core</module>
+        <module>supbuilder-wx</module>
     </modules>
 
     <properties>
@@ -20,31 +22,35 @@
         <java.version>1.8</java.version>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <springweb.version>2.7.6</springweb.version>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <java.version>1.8</java.version>
+        <java.version>1.8</java.version>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <mybatis.version>2.1.3</mybatis.version>
+        <lombok.version>1.18.12</lombok.version>
+        <pagehelper.version>1.2.5</pagehelper.version>
+        <druid.version>1.1.24</druid.version>
+        <hutool.version>5.3.8</hutool.version>
+        <swagger.version>2.9.2</swagger.version>
+        <swaggerui.version>2.9.2</swaggerui.version>
         <fastjson.version>1.2.72</fastjson.version>
+        <mapstruct.version>1.4.1.Final</mapstruct.version>
         <mysql.version>5.1.47</mysql.version>
+        <poi.version>3.9</poi.version>
+        <qcloudsms.version>1.0.4</qcloudsms.version>
+        <httpcore.version>4.4.10</httpcore.version>
+        <bcprov-jdk15on.version>1.57</bcprov-jdk15on.version>
+        <mybatis-generator.version>1.3.2</mybatis-generator.version>
+        <commons-pool2.version>2.11.0</commons-pool2.version>
+        <springboot-web.version>2.7.6</springboot-web.version>
+        <springboot-aop.version>2.7.6</springboot-aop.version>
+        <springboot-test.version>2.7.6</springboot-test.version>
+        <springboot-security.version>2.7.6</springboot-security.version>
+
     </properties>
 
-    <dependencies>
-        <!-- spring web框架 -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-            <version>${springweb.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>${mysql.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-            <version>${fastjson.version}</version>
-        </dependency>
-    </dependencies>
     <repositories>
         <repository>
             <id>alimaven</id>
