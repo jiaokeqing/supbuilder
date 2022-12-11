@@ -10,7 +10,8 @@ ProjectName and Description
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+
+[comment]: <> ([![LinkedIn][linkedin-shield]][linkedin-url])
 
 <!-- PROJECT LOGO -->
 <br />
@@ -142,7 +143,7 @@ supbuilder
 
 ### 版权说明
 
-[comment]: <> (该项目签署了MIT 授权许可，详情请参阅 [LICENSE.txt]&#40;https://github.com/jiaokeqing/supbuilder/readme/LICENSE.txt&#41;)
+[comment]: <> (该项目签署了MIT 授权许可，详情请参阅 [LICENSE.txt]&#40;https://github.com/jiaokeqing/supbuilder/LICENSE.txt&#41;)
 **版权所有，禁止商用**
 
 ### 鸣谢
@@ -156,7 +157,7 @@ supbuilder
 
 <!-- links -->
 [your-project-path]:jiaokeqing/supbuilder
-[contributors-shield]: https://img.shields.io/github/contributors/jiaokeqing/zxduck.svg?style=flat-square
+[contributors-shield]: https://img.shields.io/github/contributors/jiaokeqing/supbuilder.svg?style=flat-square
 [contributors-url]: https://github.com/jiaokeqing/supbuilder/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/jiaokeqing/supbuilder.svg?style=flat-square
 [forks-url]: https://github.com/jiaokeqing/supbuilder/network/members
@@ -165,7 +166,7 @@ supbuilder
 [issues-shield]: https://img.shields.io/github/issues/jiaokeqing/supbuilder.svg?style=flat-square
 [issues-url]: https://img.shields.io/github/issues/jiaokeqing/supbuilder.svg
 [license-shield]: https://img.shields.io/github/license/jiaokeqing/supbuilder.svg?style=flat-square
-[license-url]: https://github.com/jiaokeqing/supbuilder/readme/LICENSE.txt
+[license-url]: https://github.com/jiaokeqing/supbuilder/LICENSE.txt
 
 
 
