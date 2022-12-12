@@ -10,6 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>supbuilder-eureka-server</module>
+        <module>supbuilder-file</module>
     </modules>
 
     <parent>

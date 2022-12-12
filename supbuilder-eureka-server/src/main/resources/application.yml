@@ -6,5 +6,4 @@ spring:
 eureka:
   client:
     service-url:    #eureka的地址信息
-      defaultZone: http://localhost:8001
-    fetch-registry: false
+      defaultZone: http://localhost:8001/eureka

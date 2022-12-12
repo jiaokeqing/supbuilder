@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="supbuilder-eureka-server" />
+        <module name="supbuilder-file" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -21,6 +22,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="supbuilder-common" options="-parameters" />
       <module name="supbuilder-eureka-server" options="-parameters" />
+      <module name="supbuilder-file" options="-parameters" />
     </option>
   </component>
 </project>
