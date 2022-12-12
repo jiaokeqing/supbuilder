@@ -9,6 +9,9 @@
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/supbuilder-core/pom.xml" />
+        <option value="$PROJECT_DIR$/supbuilder-db/pom.xml" />
+        <option value="$PROJECT_DIR$/supbuilder-wx/pom.xml" />
         <option value="$PROJECT_DIR$/tools-common/pom.xml" />
         <option value="$PROJECT_DIR$/tools-db/pom.xml" />
       </set>
