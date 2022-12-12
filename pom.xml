@@ -11,9 +11,6 @@
     <modules>
 
         <module>supbuilder-common</module>
-        <module>supbuilder-db</module>
-        <module>supbuilder-core</module>
-        <module>supbuilder-wx</module>
     </modules>
 
     <properties>
