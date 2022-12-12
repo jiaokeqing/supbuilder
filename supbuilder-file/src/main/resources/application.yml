@@ -7,4 +7,14 @@ eureka:
   client:
     service-url:    #eureka的地址信息
       defaultZone: http://localhost:8001/eureka
-#    fetch-registry: false
+
+#修改服务负载均衡策略
+#userservice：
+#  ribbon:
+#    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.BestAvailableRule
+
+#ribbon:
+#  eager-load:   #懒加载
+#    enabled: true
+#    clients:
+#    - userService
