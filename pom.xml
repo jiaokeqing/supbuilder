@@ -32,7 +32,7 @@
         <boot.admin.client>2.4.0</boot.admin.client>
         <lombok.version>1.16.14</lombok.version>
         <springcloud.version>2020.0.0</springcloud.version>
-        <fastjson.version>1.2.33</fastjson.version>
+        <fastjson.version>1.2.83</fastjson.version>
         <springcloud-alibaba.version>2.2.4.RELEASE</springcloud-alibaba.version>
     </properties>
 
