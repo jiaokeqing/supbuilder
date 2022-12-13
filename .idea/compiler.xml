@@ -7,14 +7,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="supbuilder-eureka-server" />
+        <module name="supbuilder-common" />
         <module name="supbuilder-file" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="supbuilder-common" target="8" />
       <module name="supbuilder-core" target="8" />
       <module name="supbuilder-db" target="8" />
+      <module name="supbuilder-eureka-server" target="8" />
       <module name="supbuilder-wx" target="8" />
     </bytecodeTargetLevel>
   </component>

@@ -1,9 +1,0 @@
-server:
-  port: 8001
-spring:
-  application:
-    name: eurekaserver  #服务名称
-eureka:
-  client:
-    service-url:    #eureka的地址信息
-      defaultZone: http://localhost:8001/eureka
