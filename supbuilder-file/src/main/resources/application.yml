@@ -3,10 +3,13 @@ server:
 spring:
   application:
     name: fileservice  #服务名称
-eureka:
-  client:
-    service-url:    #eureka的地址信息
-      defaultZone: http://localhost:8001/eureka
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+#eureka:
+#  client:
+#    service-url:    #eureka的地址信息
+#      defaultZone: http://localhost:8001/eureka
 
 #修改服务负载均衡策略
 #userservice：
