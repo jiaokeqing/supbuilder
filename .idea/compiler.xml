@@ -2,22 +2,27 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="supbuilder-common" />
+        <module name="supbuilder-file" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="supbuilder-common" target="8" />
       <module name="supbuilder-core" target="8" />
       <module name="supbuilder-db" target="8" />
+      <module name="supbuilder-eureka-server" target="8" />
       <module name="supbuilder-wx" target="8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="supbuilder-common" options="-parameters" />
+      <module name="supbuilder-eureka-server" options="-parameters" />
+      <module name="supbuilder-file" options="-parameters" />
     </option>
   </component>
 </project>

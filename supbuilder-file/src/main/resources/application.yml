@@ -1,0 +1,26 @@
+server:
+  port: 10000
+spring:
+  application:
+    name: fileservice  #服务名称
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+      discovery:
+        cluster-name: BJ #集群名称
+        namespace: f89e60a6-3ff2-4fdb-8901-6b1cf042e9b1 #命名空间
+#eureka:
+#  client:
+#    service-url:    #eureka的地址信息
+#      defaultZone: http://localhost:8001/eureka
+
+#修改服务负载均衡策略
+testService:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.alibaba.cloud.nacos.ribbon.NacosRule
+
+#ribbon:
+#  eager-load:   #懒加载
+#    enabled: true
+#    clients:
+#    - userService
