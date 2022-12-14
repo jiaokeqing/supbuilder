@@ -105,6 +105,8 @@ supbuilder
 ### 使用到的框架
 
 - [Springboot](https://spring.io/projects/spring-boot/)
+- [SpringCloud](https://spring.io/projects/spring-cloud/)
+- [SpringCloudAlibaba](https://github.com/alibaba/spring-cloud-alibaba/)
 - [Spring Security](https://spring.io/guides/tutorials/spring-security-and-angular-js/)
 - [Mybatis](https://mybatis.org/mybatis-3/)
 - [Swagger](https://swagger.io/)
@@ -112,6 +114,7 @@ supbuilder
 ### 使用到的插件
 -  Alibaba Java Coding Guidelines
 -  lombok
+-  mybatis-generator
 ### 框架规范约定
 
 约定优于配置(convention over configuration)，此框架约定了很多编程规范，下面一一列举：
