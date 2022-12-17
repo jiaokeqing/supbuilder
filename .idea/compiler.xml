@@ -7,15 +7,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="supbuilder-common" />
+        <module name="supbuilder-file-service" />
         <module name="supbuilder-file-application" />
+        <module name="supbuilder-common" />
+        <module name="supbuilder-file-api" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="supbuilder-core" target="8" />
       <module name="supbuilder-db" target="8" />
       <module name="supbuilder-eureka-server" target="8" />
-      <module name="supbuilder-file" target="8" />
       <module name="supbuilder-wx" target="8" />
     </bytecodeTargetLevel>
   </component>
@@ -24,7 +25,9 @@
       <module name="supbuilder-common" options="-parameters -bootclasspath /Library/Java/JavaVirtualMachines/jdk1.8.0_333.jdk/Contents/Home/jre/lib/rt.jar;/Library/Java/JavaVirtualMachines/jdk1.8.0_333.jdk/Contents/Home/jre/lib/jce.jar" />
       <module name="supbuilder-eureka-server" options="-parameters" />
       <module name="supbuilder-file" options="-parameters" />
+      <module name="supbuilder-file-api" options="-parameters" />
       <module name="supbuilder-file-application" options="-parameters" />
+      <module name="supbuilder-file-service" options="-parameters" />
     </option>
   </component>
 </project>

@@ -11,6 +11,8 @@
     <modules>
         <module>supbuilder-common</module>
         <module>supbuilder-file-application</module>
+        <module>supbuilder-file</module>
+        <module>supbuilder-file/supbuilder-file-api</module>
     </modules>
 
     <parent>
