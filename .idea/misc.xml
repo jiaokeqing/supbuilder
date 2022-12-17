@@ -10,6 +10,7 @@
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/supbuilder-eureka-server/pom.xml" />
+        <option value="$PROJECT_DIR$/supbuilder-file/pom.xml" />
       </set>
     </option>
   </component>
