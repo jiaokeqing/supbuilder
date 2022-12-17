@@ -1,0 +1,52 @@
+server:
+  port: 57010 #启动端口 命令行注入
+  max‐http‐header‐size: 100KB
+nacos:
+  server:
+    addr: 127.0.0.1:8848
+spring:
+  application:
+    name: file-application
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${nacos.server.addr}
+        namespace: f89e60a6-3ff2-4fdb-8901-6b1cf042e9b1
+        cluster-name: default
+      config:
+        server-addr: ${nacos.server.addr}
+        file-extension: yaml
+        namespace: f89e60a6-3ff2-4fdb-8901-6b1cf042e9b1
+        group: FILE_GROUP
+        extension-configs:
+          -
+            refresh: true
+            data-id: spring-boot-http.yaml #springboot http配置
+            group: COMMON_GROUP
+#springmvc配置
+  servlet:
+    multipart:
+      enabled: true  #默认支持上传
+      file-size-threshold: 0    #支持写入磁盘
+      location:
+      max-file-size: 30MB
+dubbo:
+  scan:
+    base-packages: com.supbuilder
+  protocol:
+    name: dubbo
+    port: 20891
+  registry:
+    address: nacos://127.0.0.1:8848
+  application:
+    qos:
+    qos-port: 23310 #dubbo qos端口配置
+  consumer:
+    check: false
+    timeout: 3000
+    retries: -1
+logging:
+  config: classpath:log4j2.xml
+
