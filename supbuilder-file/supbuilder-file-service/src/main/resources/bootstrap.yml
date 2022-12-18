@@ -1,5 +1,5 @@
 server:
-  port: 8081 #启动端口 命令行注入
+  port: 18888 #启动端口 命令行注入
   max‐http‐header‐size: 100KB
 nacos:
   server:
@@ -25,6 +25,12 @@ spring:
             refresh: true
             data-id: spring-boot-http.yaml #springboot http配置
             group: COMMON_GROUP
+          - refresh: true
+            data-id: spring-boot-starter-druid.yaml #springboot druid配置
+            group: COMMON_GROUP
+          - refresh: true
+            data-id: spring-boot-mybatis-plus.yaml #mybatis-plus配置
+            group: COMMON_GROUP
 #springmvc配置
   servlet:
     multipart:
@@ -37,7 +43,7 @@ dubbo:
     base-packages: com.supbuilder
   protocol:
     name: dubbo
-    port: 20891
+    port: 20892
   registry:
     address: nacos://127.0.0.1:8848
   application:
