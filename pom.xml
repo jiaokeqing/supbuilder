@@ -13,6 +13,8 @@
         <module>supbuilder-file-application</module>
         <module>supbuilder-file</module>
         <module>supbuilder-file/supbuilder-file-api</module>
+        <module>mybatis-generator</module>
+        <module>supbuilder-user</module>
     </modules>
 
     <parent>
