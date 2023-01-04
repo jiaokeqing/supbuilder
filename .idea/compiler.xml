@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
+    <option name="USE_RELEASE_OPTION" value="false" />
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
@@ -9,32 +10,22 @@
         <outputRelativeToContentRoot value="true" />
         <module name="supbuilder-file-service" />
         <module name="supbuilder-user-service" />
+        <module name="supbuilder-common-mybatis" />
         <module name="supbuilder-user-api" />
-        <module name="supbuilder-common" />
         <module name="supbuilder-file-api" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="mybatis-generator" target="8" />
-      <module name="supbuilder-core" target="8" />
-      <module name="supbuilder-db" target="8" />
-      <module name="supbuilder-eureka-server" target="8" />
-      <module name="supbuilder-file-application" target="8" />
-      <module name="supbuilder-wx" target="8" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="mybatis-generator" options="-parameters" />
       <module name="supbuilder-common" options="-parameters" />
-      <module name="supbuilder-eureka-server" options="-parameters" />
+      <module name="supbuilder-common-mybatis" options="" />
       <module name="supbuilder-file" options="-parameters" />
-      <module name="supbuilder-file-api" options="-parameters" />
-      <module name="supbuilder-file-application" options="-parameters" />
-      <module name="supbuilder-file-service" options="-parameters" />
+      <module name="supbuilder-file-api" options="" />
+      <module name="supbuilder-file-service" options="" />
       <module name="supbuilder-user" options="-parameters" />
-      <module name="supbuilder-user-api" options="-parameters" />
-      <module name="supbuilder-user-service" options="-parameters" />
+      <module name="supbuilder-user-api" options="" />
+      <module name="supbuilder-user-service" options="" />
     </option>
   </component>
 </project>

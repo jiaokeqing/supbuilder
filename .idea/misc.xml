@@ -10,6 +10,7 @@
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/mybatis-generator/pom.xml" />
+        <option value="$PROJECT_DIR$/supbuilder-common-bom/pom.xml" />
         <option value="$PROJECT_DIR$/supbuilder-file-application/pom.xml" />
       </set>
     </option>

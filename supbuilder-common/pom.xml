@@ -10,11 +10,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>supbuilder-common</artifactId>
-
-    <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
-    </properties>
+    <packaging>pom</packaging>
+    <modules>
+        <module>supbuilder-common-mybatis</module>
+        <module>supbuilder-common-bom</module>
+    </modules>
 
 
 </project>
