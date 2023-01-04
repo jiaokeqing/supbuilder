@@ -6,22 +6,9 @@
 
     <groupId>com.supbuilder</groupId>
     <artifactId>supbuilder</artifactId>
-    <packaging>pom</packaging>
+    <name>${project.artifactId}</name>
     <version>1.0-SNAPSHOT</version>
-    <url>https://www.pig4cloud.com</url>
-    <modules>
-        <module>supbuilder-common</module>
-        <module>supbuilder-file</module>
-        <module>supbuilder-user</module>
-    </modules>
-
-<!--    <parent>-->
-<!--        <groupId>org.springframework.boot</groupId>-->
-<!--        <artifactId>spring-boot-starter-parent</artifactId>-->
-<!--        <version>2.3.2.RELEASE</version>-->
-<!--    </parent>-->
-
-
+    <packaging>pom</packaging>
     <properties>
         <spring-boot.version>2.7.7</spring-boot.version>
         <spring-cloud.version>2021.0.5</spring-cloud.version>
@@ -49,8 +36,6 @@
         <git.commit.plugin>4.9.9</git.commit.plugin>
         <spring.checkstyle.plugin>0.0.35</spring.checkstyle.plugin>
     </properties>
-
-
 
     <!-- 以下依赖 全局所有的模块都会引入  -->
     <dependencies>
@@ -91,16 +76,21 @@
         </dependency>
     </dependencies>
 
+    <modules>
+        <module>supbuilder-common</module>
+        <module>supbuilder-user</module>
+        <module>supbuilder-file</module>
+    </modules>
 
     <dependencyManagement>
         <dependencies>
-            <!--supbuilder 公共版本定义-->
+            <!--pig 公共版本定义-->
             <dependency>
                 <groupId>com.supbuilder</groupId>
                 <artifactId>supbuilder-common-bom</artifactId>
                 <version>${project.version}</version>
                 <type>pom</type>
-<!--                <scope>import</scope>-->
+                <scope>import</scope>
             </dependency>
             <!-- spring boot 依赖 -->
             <dependency>
@@ -211,6 +201,24 @@
                         <includeOnlyProperty>^git.commit.(id|message|time).*$</includeOnlyProperty>
                     </includeOnlyProperties>
                 </configuration>
+            </plugin>
+            <!--
+            	代码格式插件，默认使用spring 规则，可运行命令进行项目格式化：./mvnw spring-javaformat:apply 或 mvn spring-javaformat:apply，可在IDEA中安装插件以下插件进行自动格式化：
+            	https://repo1.maven.org/maven2/io/spring/javaformat/spring-javaformat-intellij-idea-plugin
+            -->
+            <plugin>
+                <groupId>io.spring.javaformat</groupId>
+                <artifactId>spring-javaformat-maven-plugin</artifactId>
+                <version>${spring.checkstyle.plugin}</version>
+                <executions>
+                    <execution>
+                        <phase>validate</phase>
+                        <inherited>true</inherited>
+                        <goals>
+                            <goal>validate</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <parent>
-        <artifactId>supbuilder-common</artifactId>
-        <groupId>com.supbuilder</groupId>
-        <version>1.0-SNAPSHOT</version>
-    </parent>
     <modelVersion>4.0.0</modelVersion>
-    <packaging>pom</packaging>
+
+    <groupId>com.supbuilder</groupId>
     <artifactId>supbuilder-common-bom</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>supbuilder-common-bom</name>
     <url>pig cloud parent</url>
-    <description>supbuilder cloud parent</description>
+    <description>pig cloud parent</description>
+
     <properties>
         <supbuilder.common.version>${project.version}</supbuilder.common.version>
         <spring-boot.version>2.7.6</spring-boot.version>
@@ -20,7 +21,7 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <git.commit.plugin>4.9.9</git.commit.plugin>
-        <spring.checkstyle.plugin>0.0.31</spring.checkstyle.plugin>
+        <spring.checkstyle.plugin>0.0.34</spring.checkstyle.plugin>
         <fastjson.version>1.2.83</fastjson.version>
         <springdoc.version>1.6.9</springdoc.version>
         <swagger.core.version>2.2.0</swagger.core.version>
@@ -40,12 +41,66 @@
     <!-- 定义全局jar版本,模块使用需要再次引入但不用写版本号-->
     <dependencyManagement>
         <dependencies>
+<!--            <dependency>-->
+<!--                <groupId>com.pig4cloud</groupId>-->
+<!--                <artifactId>pig-common-core</artifactId>-->
+<!--                <version>${pig.common.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>com.pig4cloud</groupId>-->
+<!--                <artifactId>pig-common-datasource</artifactId>-->
+<!--                <version>${pig.common.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>com.pig4cloud</groupId>-->
+<!--                <artifactId>pig-common-job</artifactId>-->
+<!--                <version>${pig.common.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>com.pig4cloud</groupId>-->
+<!--                <artifactId>pig-common-log</artifactId>-->
+<!--                <version>${pig.common.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>com.pig4cloud</groupId>-->
+<!--                <artifactId>pig-common-mybatis</artifactId>-->
+<!--                <version>${pig.common.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>com.pig4cloud</groupId>-->
+<!--                <artifactId>pig-common-security</artifactId>-->
+<!--                <version>${pig.common.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>com.pig4cloud</groupId>-->
+<!--                <artifactId>pig-common-feign</artifactId>-->
+<!--                <version>${pig.common.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>com.pig4cloud</groupId>-->
+<!--                <artifactId>pig-common-swagger</artifactId>-->
+<!--                <version>${pig.common.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>com.pig4cloud</groupId>-->
+<!--                <artifactId>pig-common-seata</artifactId>-->
+<!--                <version>${pig.common.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>com.pig4cloud</groupId>-->
+<!--                <artifactId>pig-common-xss</artifactId>-->
+<!--                <version>${pig.common.version}</version>-->
+<!--            </dependency>-->
             <dependency>
                 <groupId>com.supbuilder</groupId>
                 <artifactId>supbuilder-common-mybatis</artifactId>
                 <version>${supbuilder.common.version}</version>
             </dependency>
-
+            <dependency>
+                <groupId>com.supbuilder</groupId>
+                <artifactId>supbuilder-common-swagger</artifactId>
+                <version>${supbuilder.common.version}</version>
+            </dependency>
             <dependency>
                 <groupId>com.mysql</groupId>
                 <artifactId>mysql-connector-j</artifactId>
@@ -158,7 +213,12 @@
                 <artifactId>git-commit-id-maven-plugin</artifactId>
                 <version>${git.commit.plugin}</version>
             </plugin>
-
+            <!--代码格式插件，默认使用spring 规则-->
+            <plugin>
+                <groupId>io.spring.javaformat</groupId>
+                <artifactId>spring-javaformat-maven-plugin</artifactId>
+                <version>${spring.checkstyle.plugin}</version>
+            </plugin>
         </plugins>
     </build>
 </project>
