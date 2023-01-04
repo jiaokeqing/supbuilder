@@ -1,0 +1,6 @@
+com.supbuilder.common.core.config.TaskExecutorConfiguration
+com.supbuilder.common.core.config.JacksonConfiguration
+com.supbuilder.common.core.config.RedisTemplateConfiguration
+com.supbuilder.common.core.config.RestTemplateConfiguration
+com.supbuilder.common.core.util.SpringContextHolder
+com.supbuilder.common.core.config.WebMvcConfiguration
