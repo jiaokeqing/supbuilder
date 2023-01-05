@@ -59,6 +59,16 @@
                 <version>${supbuilder.common.version}</version>
             </dependency>
             <dependency>
+                <groupId>com.supbuilder</groupId>
+                <artifactId>supbuilder-common-security</artifactId>
+                <version>${supbuilder.common.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.supbuilder</groupId>
+                <artifactId>supbuilder-user-api</artifactId>
+                <version>${supbuilder.common.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>com.mysql</groupId>
                 <artifactId>mysql-connector-j</artifactId>
                 <version>${mysql.version}</version>
