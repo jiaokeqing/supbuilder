@@ -15,5 +15,28 @@
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
+    <dependencies>
+        <!--core 工具类-->
+        <dependency>
+            <groupId>com.supbuilder</groupId>
+            <artifactId>supbuilder-common-core</artifactId>
+        </dependency>
+        <!--swagger-->
+        <dependency>
+            <groupId>io.swagger.core.v3</groupId>
+            <artifactId>swagger-annotations</artifactId>
+        </dependency>
+        <!--feign 注解依赖-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-openfeign-core</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <!--mybatis 依赖-->
+        <dependency>
+            <groupId>com.supbuilder</groupId>
+            <artifactId>supbuilder-common-mybatis</artifactId>
+        </dependency>
 
+    </dependencies>
 </project>
