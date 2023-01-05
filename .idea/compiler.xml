@@ -10,12 +10,12 @@
         <outputRelativeToContentRoot value="true" />
         <module name="supbuilder-user-api" />
         <module name="supbuilder-common-mybatis" />
-        <module name="supbuilder-common-core" />
         <module name="supbuilder-file-api" />
+        <module name="supbuilder-common-swagger" />
         <module name="supbuilder-file-service" />
         <module name="supbuilder-common-log" />
         <module name="supbuilder-user-service" />
-        <module name="supbuilder-common-swagger" />
+        <module name="supbuilder-common-core" />
       </profile>
     </annotationProcessing>
   </component>

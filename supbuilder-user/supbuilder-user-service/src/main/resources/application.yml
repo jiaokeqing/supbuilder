@@ -1,9 +1,11 @@
 # 主配置
 
 server:
-  port: 21149
+  port: 8806
 
 spring:
+  profiles:
+    active: default
   # 数据库
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -25,5 +27,5 @@ mybatis-plus:
       logic-delete-field: hide
       logic-not-delete-value: 0
       logic-delete-value: 1
-
-
+  type-aliases-package: com.supbuilder.user.service.domain
+  mapper-locations: classpath:com/supbuilder/user/**/*.xml

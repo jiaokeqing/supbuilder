@@ -1,4 +1,4 @@
-package config;
+package com.supbuilder.user.service.config;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.generator.FastAutoGenerator;
@@ -43,7 +43,7 @@ public class GeneratorCodeConfig {
                 // 生成的代码包路径配置
                 .packageConfig(builder -> {
                     // 生成的代包公共路径
-//                    builder.parent("com.xinyue.dao");
+                    builder.parent("com.supbuilder.user.service");
                     // 生成的mapper xml的存放目录，是在parent路径下面的
                     builder.xml("mapper")
                             // 生成的实例类目录
