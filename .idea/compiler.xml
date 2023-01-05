@@ -8,14 +8,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="supbuilder-user-api" />
-        <module name="supbuilder-common-mybatis" />
-        <module name="supbuilder-file-api" />
-        <module name="supbuilder-common-swagger" />
         <module name="supbuilder-file-service" />
-        <module name="supbuilder-common-log" />
         <module name="supbuilder-user-service" />
+        <module name="supbuilder-common-mybatis" />
+        <module name="supbuilder-common-log" />
+        <module name="supbuilder-user-api" />
+        <module name="supbuilder-common-swagger" />
         <module name="supbuilder-common-core" />
+        <module name="supbuilder-common-security" />
+        <module name="supbuilder-file-api" />
       </profile>
     </annotationProcessing>
   </component>

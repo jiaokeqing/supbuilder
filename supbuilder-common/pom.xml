@@ -17,6 +17,7 @@
         <module>supbuilder-common-swagger</module>
         <module>supbuilder-common-log</module>
         <module>supbuilder-common-core</module>
+        <module>supbuilder-common-security</module>
     </modules>
 
 
