@@ -3,6 +3,8 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/supbuilder-common/supbuilder-common-core/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/supbuilder-common/supbuilder-common-core/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/supbuilder-common/supbuilder-common-datasource/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/supbuilder-common/supbuilder-common-datasource/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/supbuilder-common/supbuilder-common-feign/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/supbuilder-common/supbuilder-common-feign/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/supbuilder-common/supbuilder-common-log/src/main/java" charset="UTF-8" />

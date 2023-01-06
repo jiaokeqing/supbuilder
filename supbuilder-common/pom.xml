@@ -19,6 +19,7 @@
         <module>supbuilder-common-core</module>
         <module>supbuilder-common-security</module>
         <module>supbuilder-common-feign</module>
+        <module>supbuilder-common-datasource</module>
     </modules>
 
 
