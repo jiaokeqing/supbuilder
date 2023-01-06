@@ -23,14 +23,17 @@
             <artifactId>supbuilder-common-feign</artifactId>
         </dependency>
         <!--安全模块-->
-
+        <dependency>
+            <groupId>com.supbuilder</groupId>
+            <artifactId>supbuilder-common-security</artifactId>
+        </dependency>
         <!--日志处理-->
 
         <!--接口文档-->
-        <dependency>
-            <groupId>com.supbuilder</groupId>
-            <artifactId>supbuilder-common-swagger</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.supbuilder</groupId>-->
+<!--            <artifactId>supbuilder-common-swagger</artifactId>-->
+<!--        </dependency>-->
         <!-- orm 模块-->
         <dependency>
             <groupId>com.baomidou</groupId>
@@ -61,6 +64,10 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-undertow</artifactId>
         </dependency>
+
+
+
+
     </dependencies>
 
     <build>
