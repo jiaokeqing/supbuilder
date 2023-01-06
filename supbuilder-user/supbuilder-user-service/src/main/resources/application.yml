@@ -1,31 +1,31 @@
 # 主配置
 
 server:
-  port: 8806
+  port: 21106
 
-#spring:
-#  profiles:
-#    active: default
-#  # 数据库
-#  datasource:
-#    driver-class-name: com.mysql.cj.jdbc.Driver
-#    url: jdbc:mysql://localhost:3306/supbuilder?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
-#    username: root
-#    password: 123456
-#
-## mybatisPlus
-#mybatis-plus:
-#  # 开启mybatisPlus日志（输出到控制台）
-#  configuration:
-#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-#  # 全局配置
-#  global-config:
-#    db-config:
-#      # 主键ID生成策略
-#      id-type: auto
-#      # 逻辑删除策略
-#      logic-delete-field: hide
-#      logic-not-delete-value: 0
-#      logic-delete-value: 1
-#  type-aliases-package: com.supbuilder.user.service.domain
-#  mapper-locations: classpath:com/supbuilder/user/**/*.xml
+spring:
+  profiles:
+    active: default
+  # 数据库
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/supbuilder?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
+    username: root
+    password: 123456
+
+# mybatisPlus
+mybatis-plus:
+  # 开启mybatisPlus日志（输出到控制台）
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  # 全局配置
+  global-config:
+    db-config:
+      # 主键ID生成策略
+      id-type: auto
+      # 逻辑删除策略
+      logic-delete-field: hide
+      logic-not-delete-value: 0
+      logic-delete-value: 1
+  type-aliases-package: com.supbuilder.user.service.domain
+  mapper-locations: classpath:com/supbuilder/user/**/*.xml

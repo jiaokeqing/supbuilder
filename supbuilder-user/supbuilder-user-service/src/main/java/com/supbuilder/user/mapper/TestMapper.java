@@ -18,13 +18,13 @@ package com.supbuilder.user.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.supbuilder.user.api.entity.Test;
+import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Update;
 
 import java.util.List;
 
 @Mapper
 public interface TestMapper extends BaseMapper<Test> {
-
-
 
 }

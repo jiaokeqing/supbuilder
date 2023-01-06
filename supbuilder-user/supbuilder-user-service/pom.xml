@@ -22,15 +22,15 @@
             <groupId>com.supbuilder</groupId>
             <artifactId>supbuilder-user-api</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.supbuilder</groupId>
-            <artifactId>supbuilder-common-security</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.supbuilder</groupId>-->
+<!--            <artifactId>supbuilder-common-security</artifactId>-->
+<!--        </dependency>-->
         <!--安全模块-->
-        <dependency>
-            <groupId>com.supbuilder</groupId>
-            <artifactId>supbuilder-common-security</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.supbuilder</groupId>-->
+<!--            <artifactId>supbuilder-common-security</artifactId>-->
+<!--        </dependency>-->
         <!--日志处理-->
 
 
