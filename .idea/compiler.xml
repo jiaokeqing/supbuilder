@@ -14,6 +14,7 @@
         <module name="supbuilder-common-log" />
         <module name="supbuilder-user-api" />
         <module name="supbuilder-common-swagger" />
+        <module name="supbuilder-common-feign" />
         <module name="supbuilder-common-core" />
         <module name="supbuilder-common-security" />
         <module name="supbuilder-file-api" />

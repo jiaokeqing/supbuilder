@@ -18,6 +18,7 @@
         <module>supbuilder-common-log</module>
         <module>supbuilder-common-core</module>
         <module>supbuilder-common-security</module>
+        <module>supbuilder-common-feign</module>
     </modules>
 
 

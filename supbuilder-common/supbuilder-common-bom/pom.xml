@@ -65,6 +65,11 @@
             </dependency>
             <dependency>
                 <groupId>com.supbuilder</groupId>
+                <artifactId>supbuilder-common-feign</artifactId>
+                <version>${supbuilder.common.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.supbuilder</groupId>
                 <artifactId>supbuilder-user-api</artifactId>
                 <version>${supbuilder.common.version}</version>
             </dependency>
