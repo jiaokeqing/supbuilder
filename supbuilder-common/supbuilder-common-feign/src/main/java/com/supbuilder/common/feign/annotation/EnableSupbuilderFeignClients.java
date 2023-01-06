@@ -17,7 +17,7 @@ import java.lang.annotation.*;
 @Documented
 @EnableFeignClients
 @Import(SupbuilderFeignClientsRegistrar.class)
-public @interface EnablePigFeignClients {
+public @interface EnableSupbuilderFeignClients {
 
 	/**
 	 * Alias for the {@link #basePackages()} attribute. Allows for more concise annotation

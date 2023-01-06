@@ -14,26 +14,37 @@
  * limitations under the License.
  */
 
-package com.supbuilder.common.swagger.annotation;
+package com.supbuilder.file.api.entity;
 
-
-import com.supbuilder.common.swagger.config.SwaggerAutoConfiguration;
-import com.supbuilder.common.swagger.support.SwaggerProperties;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.context.annotation.Import;
-
-import java.lang.annotation.*;
+import com.baomidou.mybatisplus.extension.activerecord.Model;
+import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 /**
- * 开启 pig spring doc
+ * <p>
+ * 角色菜单表
+ * </p>
  *
+ * @author lengleng
+ * @since 2019/2/1
  */
-@Target({ ElementType.TYPE })
-@Retention(RetentionPolicy.RUNTIME)
-@Documented
-@Inherited
-@EnableConfigurationProperties(SwaggerProperties.class)
-@Import({ SwaggerAutoConfiguration.class })
-public @interface EnablePigDoc {
+@Data
+@EqualsAndHashCode(callSuper = true)
+public class SysRoleMenu extends Model<SysRoleMenu> {
+
+	private static final long serialVersionUID = 1L;
+
+	/**
+	 * 角色ID
+	 */
+	@Schema(description = "角色id")
+	private Long roleId;
+
+	/**
+	 * 菜单ID
+	 */
+	@Schema(description = "菜单id")
+	private Long menuId;
 
 }
