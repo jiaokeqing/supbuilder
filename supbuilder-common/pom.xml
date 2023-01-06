@@ -20,6 +20,7 @@
         <module>supbuilder-common-security</module>
         <module>supbuilder-common-feign</module>
         <module>supbuilder-common-datasource</module>
+        <module>supbuilder-common-xss</module>
     </modules>
 
 

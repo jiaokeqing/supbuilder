@@ -4,7 +4,6 @@
     <file url="file://$PROJECT_DIR$/supbuilder-common/supbuilder-common-core/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/supbuilder-common/supbuilder-common-core/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/supbuilder-common/supbuilder-common-datasource/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/supbuilder-common/supbuilder-common-datasource/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/supbuilder-common/supbuilder-common-feign/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/supbuilder-common/supbuilder-common-feign/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/supbuilder-common/supbuilder-common-log/src/main/java" charset="UTF-8" />
@@ -15,6 +14,8 @@
     <file url="file://$PROJECT_DIR$/supbuilder-common/supbuilder-common-security/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/supbuilder-common/supbuilder-common-swagger/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/supbuilder-common/supbuilder-common-swagger/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/supbuilder-common/supbuilder-common-xss/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/supbuilder-common/supbuilder-common-xss/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/supbuilder-file/supbuilder-file-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/supbuilder-file/supbuilder-file-service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/supbuilder-user/supbuilder-user-api/src/main/java" charset="UTF-8" />
