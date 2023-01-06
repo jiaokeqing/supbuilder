@@ -34,6 +34,6 @@ import java.lang.annotation.*;
 @Inherited
 @EnableConfigurationProperties(SwaggerProperties.class)
 @Import({ SwaggerAutoConfiguration.class })
-public @interface EnablePigDoc {
+public @interface EnableSupbuilderDoc {
 
 }
