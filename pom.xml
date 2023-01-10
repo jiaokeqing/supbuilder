@@ -80,6 +80,8 @@
         <module>supbuilder-common</module>
         <module>supbuilder-user</module>
         <module>supbuilder-file</module>
+        <module>supbuilder-register</module>
+        <module>supbuilder-gateway</module>
     </modules>
 
     <dependencyManagement>
