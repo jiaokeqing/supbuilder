@@ -10,11 +10,17 @@
         <outputRelativeToContentRoot value="true" />
         <module name="supbuilder-file-service" />
         <module name="supbuilder-user-service" />
-        <module name="supbuilder-common-mybatis" />
         <module name="supbuilder-common-log" />
-        <module name="supbuilder-user-api" />
-        <module name="supbuilder-common-swagger" />
+        <module name="supbuilder-common-feign" />
         <module name="supbuilder-common-core" />
+        <module name="supbuilder-common-security" />
+        <module name="supbuilder-common-mybatis" />
+        <module name="supbuilder-user-api" />
+        <module name="supbuilder-common-datasource" />
+        <module name="supbuilder-common-xss" />
+        <module name="supbuilder-common-swagger" />
+        <module name="supbuilder-register" />
+        <module name="supbuilder-gateway" />
         <module name="supbuilder-file-api" />
       </profile>
     </annotationProcessing>

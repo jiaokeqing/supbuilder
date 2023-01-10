@@ -1,0 +1,3 @@
+com.supbuilder.common.feign.PigFeignAutoConfiguration
+com.supbuilder.common.feign.sentinel.SentinelAutoConfiguration
+com.supbuilder.common.feign.sentinel.handle.GlobalBizExceptionHandler

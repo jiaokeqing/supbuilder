@@ -27,6 +27,12 @@
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-http</artifactId>
         </dependency>
+        <!--USER接口模块-->
+        <dependency>
+            <groupId>com.supbuilder</groupId>
+            <artifactId>supbuilder-user-api</artifactId>
+        </dependency>
+        <!--安全依赖获取上下文信息-->
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-core</artifactId>
