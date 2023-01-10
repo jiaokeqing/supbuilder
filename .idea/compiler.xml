@@ -20,6 +20,7 @@
         <module name="supbuilder-common-xss" />
         <module name="supbuilder-common-swagger" />
         <module name="supbuilder-register" />
+        <module name="supbuilder-gateway" />
         <module name="supbuilder-file-api" />
       </profile>
     </annotationProcessing>
