@@ -2,19 +2,24 @@
 
 server:
   port: 21106
-
+  servlet:
+    context-path: /supbuilder
 spring:
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
   profiles:
     active: default
   # 数据库
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://49.232.15.96:3306/supbuilder_file?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
+    url: jdbc:mysql://192.168.100.202:3306/jeecg_boot?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
     username: root
-    password: qaz@WSX
+    password: Atcmis-123456
   redis:
-    database: 0
-    host: 49.232.15.96
+    database: 11
+    host: 192.168.100.202
     port: 6379
     password: ''
     lettuce:
@@ -40,3 +45,13 @@ mybatis-plus:
       logic-delete-value: 1
   type-aliases-package: com.supbuilder.user.service.domain
   mapper-locations: classpath:com/supbuilder/user/**/*.xml
+
+supbuilder:
+
+  converse:
+    upload:
+      path: C:\Users\矫克清\Desktop\converse\pdf\
+    result:
+      path: C:\Users\矫克清\Desktop\converse\word\
+    download:
+      url: /usr/local/
