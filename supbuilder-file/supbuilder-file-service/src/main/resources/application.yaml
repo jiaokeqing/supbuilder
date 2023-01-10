@@ -9,13 +9,12 @@ spring:
   # 数据库
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://192.168.100.202:3306/jeecg_boot?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
+    url: jdbc:mysql://49.232.15.96:3306/supbuilder_file?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
     username: root
-    password: Atcmis-123456
+    password: qaz@WSX
   redis:
     database: 0
-    host: 192.168.100.202
-    #    host: 10.168.120.1
+    host: 49.232.15.96
     port: 6379
     password: ''
     lettuce:
