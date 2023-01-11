@@ -138,14 +138,15 @@ public class ConverseService {
 
 
     /**
-     *
+     * excel转pdf 支持多sheet
      * @param sourceFile
      * @param targetFile
      * @param downloadUrl
      * @param fileId
      */
+    @Async
     public void excel2Pdf(String sourceFile, String targetFile, String downloadUrl, String fileId) {
-        System.out.println("启动Pdf转word处理程序...");
+        System.out.println("启动excel转pdf处理程序...");
         System.out.println(targetFile);
         long start = System.currentTimeMillis();
         ActiveXComponent app = null;
