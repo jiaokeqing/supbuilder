@@ -2,6 +2,7 @@ package com.supbuilder.file.async;
 
 
 import com.jacob.activeX.ActiveXComponent;
+import com.jacob.com.ComThread;
 import com.jacob.com.Dispatch;
 import com.jacob.com.Variant;
 import com.supbuilder.common.core.constant.FileHandleTypeConstants;
@@ -26,12 +27,19 @@ import java.nio.file.Paths;
 @Component
 public class ConverseService {
     static final int wdFormatPDF = 17;// PDF 格式
-
+    private static final int xlTypePDF = 0;  // xls格式
     @Autowired
     private RedisUtil redisUtil;
 
+    /**
+     * doc、docx转pdf
+     * @param sourceFile
+     * @param targetFile
+     * @param downloadUrl
+     * @param fileId
+     */
     @Async
-    public void wordToPdf(String sourceFile, String targetFile, String downloadUrl, String fileId) {
+    public void word2Pdf(String sourceFile, String targetFile, String downloadUrl, String fileId) {
         System.out.println("启动Word转pdf处理程序...");
 
         long start = System.currentTimeMillis();
@@ -76,8 +84,16 @@ public class ConverseService {
 
 
     }
+
+    /**
+     * pdf转docx
+     * @param sourceFile
+     * @param targetFile
+     * @param downloadUrl
+     * @param fileId
+     */
     @Async
-    public void pdfToDocx(String sourceFile, String targetFile, String downloadUrl, String fileId) {
+    public void pdf2Docx(String sourceFile, String targetFile, String downloadUrl, String fileId) {
         System.out.println("启动Pdf转word处理程序...");
         System.out.println(targetFile);
         long start = System.currentTimeMillis();
@@ -107,6 +123,51 @@ public class ConverseService {
 
             //更新处理结果
                 FileHandleVO fileHandleVO=new FileHandleVO(fileId,downloadUrl, FileStatusEnum.SUCCESS,"文件处理成功");
+            redisUtil.hset(FileHandleTypeConstants.FILE_CONVERSE, fileId, fileHandleVO, 1800);
+        } catch (Exception e) {
+
+            e.printStackTrace();
+            if (app!=null){
+                app.invoke("Close");
+            }
+            FileHandleVO fileHandleVO=new FileHandleVO(fileId,null, FileStatusEnum.FAIL,"文件处理失败");
+            redisUtil.hset(FileHandleTypeConstants.FILE_CONVERSE, fileId, fileHandleVO, 1800);
+        }
+
+    }
+
+
+    /**
+     *
+     * @param sourceFile
+     * @param targetFile
+     * @param downloadUrl
+     * @param fileId
+     */
+    public void excel2Pdf(String sourceFile, String targetFile, String downloadUrl, String fileId) {
+        System.out.println("启动Pdf转word处理程序...");
+        System.out.println(targetFile);
+        long start = System.currentTimeMillis();
+        ActiveXComponent app = null;
+        Dispatch excel  = null;
+
+        try {
+
+
+            app = new ActiveXComponent("Excel.Application");
+            app.setProperty("Visible", false);
+            Dispatch excels = app.getProperty("Workbooks").toDispatch();
+            excel = Dispatch.call(excels, "Open", sourceFile, false, true).toDispatch();
+            Dispatch.call(excel, "ExportAsFixedFormat", xlTypePDF, targetFile);
+            System.out.println("打开文档..." + sourceFile);
+            System.out.println("转换文档到 PDF..." + targetFile);
+
+
+            long end = System.currentTimeMillis();
+            System.out.println("转换完成..用时：" + (end - start) + "ms.");
+
+            //更新处理结果
+            FileHandleVO fileHandleVO=new FileHandleVO(fileId,downloadUrl, FileStatusEnum.SUCCESS,"文件处理成功");
             redisUtil.hset(FileHandleTypeConstants.FILE_CONVERSE, fileId, fileHandleVO, 1800);
         } catch (Exception e) {
 

@@ -64,13 +64,13 @@ public class WordServiceImpl implements WordService {
             sourceFile = UploadFileUtil.uploadFile(wordFile, converseUploadPath + timeDir);
             String name = FileNameUtil.mainName(sourceFile);
             String targetFile = conversedResultPath + timeDir + name + FileTypeSuffixConstants.PDF_SUFFIX;
-            String downloadUrl = converseDownLoadUrl + timeDir + name + FileTypeSuffixConstants.DOCX_SUFFIX;
+            String downloadUrl = converseDownLoadUrl + timeDir + name + FileTypeSuffixConstants.PDF_SUFFIX;
 
             FileHandleVO fileHandleVO = new FileHandleVO(fileId, null, FileStatusEnum.ING, "文件正在处理，请稍等...");
             //处理结果
             redisUtil.hset(FileHandleTypeConstants.FILE_CONVERSE, fileId, fileHandleVO, 1800);
 
-            converseService.wordToPdf(sourceFile,targetFile,downloadUrl,fileId);
+            converseService.word2Pdf(sourceFile,targetFile,downloadUrl,fileId);
 
 
         } catch (Exception e) {

@@ -60,7 +60,7 @@ public class PdfServiceImpl implements PdfService {
 
             String targetFile = conversedResultPath + timeDir + name + FileTypeSuffixConstants.DOCX_SUFFIX;
             String downloadUrl = converseDownLoadUrl + timeDir + name + FileTypeSuffixConstants.DOCX_SUFFIX;
-            converseService.pdfToDocx(sourceFile, targetFile, downloadUrl, fileId);
+            converseService.pdf2Docx(sourceFile, targetFile, downloadUrl, fileId);
 
 
             FileHandleVO fileHandleVO = new FileHandleVO(fileId, null, FileStatusEnum.ING, "文件正在处理，请稍等...");
