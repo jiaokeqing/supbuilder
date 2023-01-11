@@ -33,6 +33,7 @@ public class ConverseService {
 
     /**
      * doc、docx转pdf
+     *
      * @param sourceFile
      * @param targetFile
      * @param downloadUrl
@@ -87,6 +88,7 @@ public class ConverseService {
 
     /**
      * pdf转docx
+     *
      * @param sourceFile
      * @param targetFile
      * @param downloadUrl
@@ -95,7 +97,6 @@ public class ConverseService {
     @Async
     public void pdf2Docx(String sourceFile, String targetFile, String downloadUrl, String fileId) {
         System.out.println("启动Pdf转word处理程序...");
-        System.out.println(targetFile);
         long start = System.currentTimeMillis();
         ActiveXComponent app = null;
         Dispatch doc = null;
@@ -122,15 +123,15 @@ public class ConverseService {
             System.out.println("转换完成..用时：" + (end - start) + "ms.");
 
             //更新处理结果
-                FileHandleVO fileHandleVO=new FileHandleVO(fileId,downloadUrl, FileStatusEnum.SUCCESS,"文件处理成功");
+            FileHandleVO fileHandleVO = new FileHandleVO(fileId, downloadUrl, FileStatusEnum.SUCCESS, "文件处理成功");
             redisUtil.hset(FileHandleTypeConstants.FILE_CONVERSE, fileId, fileHandleVO, 1800);
         } catch (Exception e) {
 
             e.printStackTrace();
-            if (app!=null){
+            if (app != null) {
                 app.invoke("Close");
             }
-            FileHandleVO fileHandleVO=new FileHandleVO(fileId,null, FileStatusEnum.FAIL,"文件处理失败");
+            FileHandleVO fileHandleVO = new FileHandleVO(fileId, null, FileStatusEnum.FAIL, "文件处理失败");
             redisUtil.hset(FileHandleTypeConstants.FILE_CONVERSE, fileId, fileHandleVO, 1800);
         }
 
@@ -139,6 +140,7 @@ public class ConverseService {
 
     /**
      * excel转pdf 支持多sheet
+     *
      * @param sourceFile
      * @param targetFile
      * @param downloadUrl
@@ -147,10 +149,9 @@ public class ConverseService {
     @Async
     public void excel2Pdf(String sourceFile, String targetFile, String downloadUrl, String fileId) {
         System.out.println("启动excel转pdf处理程序...");
-        System.out.println(targetFile);
         long start = System.currentTimeMillis();
         ActiveXComponent app = null;
-        Dispatch excel  = null;
+        Dispatch excel = null;
 
         try {
 
@@ -161,22 +162,75 @@ public class ConverseService {
             excel = Dispatch.call(excels, "Open", sourceFile, false, true).toDispatch();
             Dispatch.call(excel, "ExportAsFixedFormat", xlTypePDF, targetFile);
             System.out.println("打开文档..." + sourceFile);
-            System.out.println("转换文档到 PDF..." + targetFile);
+            System.out.println("excel转换文档到 PDF..." + targetFile);
 
 
             long end = System.currentTimeMillis();
             System.out.println("转换完成..用时：" + (end - start) + "ms.");
 
             //更新处理结果
-            FileHandleVO fileHandleVO=new FileHandleVO(fileId,downloadUrl, FileStatusEnum.SUCCESS,"文件处理成功");
+            FileHandleVO fileHandleVO = new FileHandleVO(fileId, downloadUrl, FileStatusEnum.SUCCESS, "文件处理成功");
             redisUtil.hset(FileHandleTypeConstants.FILE_CONVERSE, fileId, fileHandleVO, 1800);
         } catch (Exception e) {
 
             e.printStackTrace();
-            if (app!=null){
+            if (app != null) {
                 app.invoke("Close");
             }
-            FileHandleVO fileHandleVO=new FileHandleVO(fileId,null, FileStatusEnum.FAIL,"文件处理失败");
+            FileHandleVO fileHandleVO = new FileHandleVO(fileId, null, FileStatusEnum.FAIL, "文件处理失败");
+            redisUtil.hset(FileHandleTypeConstants.FILE_CONVERSE, fileId, fileHandleVO, 1800);
+        }
+
+    }
+
+    /**
+     * ppt转pdf
+     *
+     * @param sourceFile
+     * @param targetFile
+     * @param downloadUrl
+     * @param fileId
+     */
+    @Async
+    public void ppt2Pdf(String sourceFile, String targetFile, String downloadUrl, String fileId) {
+        System.out.println("启动ppt转pdf处理程序...");
+        long start = System.currentTimeMillis();
+        ActiveXComponent app = null;
+        Dispatch ppt = null;
+
+        try {
+
+
+            ComThread.InitSTA();
+            app = new ActiveXComponent("PowerPoint.Application");
+            Dispatch ppts = app.getProperty("Presentations").toDispatch();
+
+            // 因POWER.EXE的发布规则为同步，所以设置为同步发布
+            ppt = Dispatch.call(ppts, "Open", sourceFile,
+                    // ReadOnly
+                    true,
+                    // Untitled指定文件是否有标题
+                    true,
+                    // WithWindow指定文件是否可见
+                    false
+            ).toDispatch();
+            // ppSaveAsPDF为特定值32
+            Dispatch.call(ppt, "SaveAs", targetFile, 32);
+
+            System.out.println("ppt转换文档到 PDF..." + targetFile);
+            long end = System.currentTimeMillis();
+            System.out.println("转换完成..用时：" + (end - start) + "ms.");
+
+            //更新处理结果
+            FileHandleVO fileHandleVO = new FileHandleVO(fileId, downloadUrl, FileStatusEnum.SUCCESS, "文件处理成功");
+            redisUtil.hset(FileHandleTypeConstants.FILE_CONVERSE, fileId, fileHandleVO, 1800);
+        } catch (Exception e) {
+
+            e.printStackTrace();
+            if (app != null) {
+                app.invoke("Close");
+            }
+            FileHandleVO fileHandleVO = new FileHandleVO(fileId, null, FileStatusEnum.FAIL, "文件处理失败");
             redisUtil.hset(FileHandleTypeConstants.FILE_CONVERSE, fileId, fileHandleVO, 1800);
         }
 
