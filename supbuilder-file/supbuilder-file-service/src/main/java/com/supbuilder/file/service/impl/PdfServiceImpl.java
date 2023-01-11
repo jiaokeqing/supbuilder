@@ -64,11 +64,11 @@ public class PdfServiceImpl implements PdfService {
 
             String downloadUrl=converseDownLoadUrl+ pdfFile.getOriginalFilename() + FileTypeSuffixConstants.DOCX_SUFFIX;
             //更新处理结果
-            fileHandleVO=new FileHandleVO(fileId,downloadUrl, FileStatusEnum.ING,"文件处理成功");
+            fileHandleVO=new FileHandleVO(fileId,downloadUrl, FileStatusEnum.SUCCESS,"文件处理成功");
             redisUtil.hset(FileHandleTypeConstants.FILE_CONVERSE, fileId, fileHandleVO, 1800);
         } catch (Exception e) {
             e.printStackTrace();
-            FileHandleVO fileHandleVO=new FileHandleVO(fileId,null, FileStatusEnum.ING,"文件处理失败");
+            FileHandleVO fileHandleVO=new FileHandleVO(fileId,null, FileStatusEnum.FAIL,"文件处理失败");
             redisUtil.hset(FileHandleTypeConstants.FILE_CONVERSE, fileId, fileHandleVO, 1800);
         }
 
