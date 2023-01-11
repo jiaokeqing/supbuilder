@@ -8,6 +8,7 @@ import com.supbuilder.file.api.constant.FileStatusEnum;
 import com.supbuilder.file.api.vo.FileHandleVO;
 import com.supbuilder.file.async.ConverseService;
 import com.supbuilder.file.service.ExcelService;
+import com.supbuilder.file.service.ImgService;
 import com.supbuilder.file.utils.UploadFileUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -18,9 +19,11 @@ import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
-public class ExcelServiceImpl implements ExcelService {
+public class ImgServiceImpl implements ImgService {
     @Value("${supbuilder.converse.upload.path}")
     private String converseUploadPath;
 
@@ -37,23 +40,29 @@ public class ExcelServiceImpl implements ExcelService {
 
     @Autowired
     private ConverseService converseService;
+
+
     @Override
-    public void toPdf(MultipartFile excelFile, String fileId) {
+    public void toPdf(MultipartFile[] imgFiles, String fileId) {
         String timeDir = System.currentTimeMillis() + File.separator;
 
-
+        List<String> sourceFileList=new ArrayList<>();
         try {
             //创建转换目录
             Path converseDir = Paths.get(conversedResultPath + timeDir);
             Files.createDirectory(converseDir);
+            String name="转换后";
+            for (MultipartFile imgFile:imgFiles){
+                String sourceFile = null;
+                sourceFile = UploadFileUtil.uploadFile(imgFile, converseUploadPath + timeDir);
+                name = FileNameUtil.mainName(sourceFile);
+                sourceFileList.add(sourceFile);
+            }
 
-            String sourceFile = null;
-            sourceFile = UploadFileUtil.uploadFile(excelFile, converseUploadPath + timeDir);
-            String name = FileNameUtil.mainName(sourceFile);
 
             String targetFile = conversedResultPath + timeDir + name + FileTypeSuffixConstants.PDF_SUFFIX;
             String downloadUrl = converseDownLoadUrl + timeDir + name + FileTypeSuffixConstants.PDF_SUFFIX;
-            converseService.excel2Pdf(sourceFile, targetFile, downloadUrl, fileId);
+            converseService.img2Pdf(sourceFileList, targetFile, downloadUrl, fileId);
 
 
             FileHandleVO fileHandleVO = new FileHandleVO(fileId, null, FileStatusEnum.ING, "文件正在处理，请稍等...");

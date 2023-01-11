@@ -2,8 +2,8 @@ package com.supbuilder.file.service;
 
 import org.springframework.web.multipart.MultipartFile;
 
-public interface ExcelService {
+public interface ImgService {
 
-    void toPdf(MultipartFile excelFile, String fileId);
+    void toPdf(MultipartFile[] imgFiles, String fileId);
 
 }

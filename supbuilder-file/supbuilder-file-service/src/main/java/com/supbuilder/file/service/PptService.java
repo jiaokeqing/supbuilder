@@ -4,6 +4,6 @@ import org.springframework.web.multipart.MultipartFile;
 
 public interface PptService {
 
-    void toPdf(MultipartFile pdfFile, String fileId);
+    void toPdf(MultipartFile pptFile, String fileId);
 
 }

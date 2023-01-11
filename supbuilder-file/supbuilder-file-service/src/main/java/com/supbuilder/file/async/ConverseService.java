@@ -1,6 +1,9 @@
 package com.supbuilder.file.async;
 
-
+import com.itextpdf.text.Document;
+import com.itextpdf.text.Image;
+import com.itextpdf.text.Rectangle;
+import com.itextpdf.text.pdf.PdfWriter;
 import com.jacob.activeX.ActiveXComponent;
 import com.jacob.com.ComThread;
 import com.jacob.com.Dispatch;
@@ -17,9 +20,11 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
+import java.io.FileOutputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.List;
 
 /**
  * @author 矫克清
@@ -230,6 +235,68 @@ public class ConverseService {
             if (app != null) {
                 app.invoke("Close");
             }
+            FileHandleVO fileHandleVO = new FileHandleVO(fileId, null, FileStatusEnum.FAIL, "文件处理失败");
+            redisUtil.hset(FileHandleTypeConstants.FILE_CONVERSE, fileId, fileHandleVO, 1800);
+        }
+
+    }
+
+    /**
+     * 图片转pdf
+     *
+     * @param sourceFile
+     * @param targetFile
+     * @param downloadUrl
+     * @param fileId
+     */
+    @Async
+    public void img2Pdf(List<String> sourceFile, String targetFile, String downloadUrl, String fileId) {
+        System.out.println("启动图片转pdf处理程序...");
+        long start = System.currentTimeMillis();
+
+
+        try {
+
+            File file = new File(targetFile);
+            // 第一步：创建一个document对象。
+            Document document = new Document();
+            document.setMargins(0, 0, 0, 0);
+            // 第二步：
+            // 创建一个PdfWriter实例，
+            PdfWriter.getInstance(document, new FileOutputStream(file));
+            // 第三步：打开文档。
+            document.open();
+            // 第四步：在文档中增加图片。
+
+
+            for (int i = 0; i < sourceFile.size(); i++) {
+                if (sourceFile.get(i).toLowerCase().endsWith(".bmp")
+                        || sourceFile.get(i).toLowerCase().endsWith(".jpg")
+                        || sourceFile.get(i).toLowerCase().endsWith(".jpeg")
+                        || sourceFile.get(i).toLowerCase().endsWith(".gif")
+                        || sourceFile.get(i).toLowerCase().endsWith(".png")) {
+                    Image img = Image.getInstance(sourceFile.get(i));
+                    img.setAlignment(Image.ALIGN_CENTER);
+                    // 根据图片大小设置页面，一定要先设置页面，再newPage（），否则无效
+                    document.setPageSize(new Rectangle(img.getWidth(), img.getHeight()));
+                    document.newPage();
+                    document.add(img);
+                }
+            }
+            // 第五步：关闭文档。
+            document.close();
+
+
+            System.out.println("图片转换文档到 PDF..." + targetFile);
+            long end = System.currentTimeMillis();
+            System.out.println("转换完成..用时：" + (end - start) + "ms.");
+
+            //更新处理结果
+            FileHandleVO fileHandleVO = new FileHandleVO(fileId, downloadUrl, FileStatusEnum.SUCCESS, "文件处理成功");
+            redisUtil.hset(FileHandleTypeConstants.FILE_CONVERSE, fileId, fileHandleVO, 1800);
+        } catch (Exception e) {
+
+            e.printStackTrace();
             FileHandleVO fileHandleVO = new FileHandleVO(fileId, null, FileStatusEnum.FAIL, "文件处理失败");
             redisUtil.hset(FileHandleTypeConstants.FILE_CONVERSE, fileId, fileHandleVO, 1800);
         }

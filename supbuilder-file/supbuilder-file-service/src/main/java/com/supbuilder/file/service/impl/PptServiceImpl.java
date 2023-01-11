@@ -41,7 +41,7 @@ public class PptServiceImpl implements PptService {
     private RedisUtil redisUtil;
 
     @Override
-    public void toPdf(MultipartFile wordFile, String fileId) {
+    public void toPdf(MultipartFile pptFile, String fileId) {
 
 
         String timeDir = System.currentTimeMillis() + File.separator;
@@ -54,7 +54,7 @@ public class PptServiceImpl implements PptService {
             Files.createDirectory(converseDir);
 
 
-            sourceFile = UploadFileUtil.uploadFile(wordFile, converseUploadPath + timeDir);
+            sourceFile = UploadFileUtil.uploadFile(pptFile, converseUploadPath + timeDir);
             String name = FileNameUtil.mainName(sourceFile);
             String targetFile = conversedResultPath + timeDir + name + FileTypeSuffixConstants.PDF_SUFFIX;
             String downloadUrl = converseDownLoadUrl + timeDir + name + FileTypeSuffixConstants.PDF_SUFFIX;

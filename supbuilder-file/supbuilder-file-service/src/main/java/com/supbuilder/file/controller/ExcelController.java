@@ -19,9 +19,9 @@ import java.util.UUID;
 public class ExcelController {
     private final ExcelService excelService;
     @PostMapping("/toPdf")
-    public R toWord(@RequestParam(value = "file",required = true) MultipartFile pdfFile) {
+    public R toWord(@RequestParam(value = "file",required = true) MultipartFile excelFile) {
         String fileId= UUID.randomUUID().toString();
-        excelService.toPdf(pdfFile,fileId);
+        excelService.toPdf(excelFile,fileId);
 
         FileHandleVO fileHandleVO=new FileHandleVO(fileId,null, FileStatusEnum.ING,"文件正在处理，请稍等...");
         return R.ok(fileHandleVO,"文件正在处理，请稍等...");
