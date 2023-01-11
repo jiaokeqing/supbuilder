@@ -1,5 +1,7 @@
 package com.supbuilder.file.utils;
 
+import cn.hutool.core.io.FileUtil;
+import cn.hutool.core.io.IoUtil;
 import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -16,6 +18,8 @@ import java.util.stream.Stream;
 public class UploadFileUtil {
 
     public static String uploadFile(MultipartFile file, String upLoadPath) throws Exception {
+
+        System.out.println(file.getResource());
         InputStream inputStream = null;
         OutputStream outputStream = null;
         String fileUrl = null;
@@ -23,13 +27,15 @@ public class UploadFileUtil {
         inputStream = file.getInputStream();
         //获取上传时的文件名
         String fileName = file.getOriginalFilename();
-        File targetFile = new File(upLoadPath + fileName);
+        File targetFile = new File(new File(upLoadPath).getAbsolutePath()+File.separator + fileName);
         //判断文件父目录是否存在
         if (!targetFile.getParentFile().exists()) {
             //不存在就创建一个
             targetFile.getParentFile().mkdirs();
         }
-        file.transferTo(targetFile);
+//        file.transferTo(targetFile);
+        BufferedOutputStream out = FileUtil.getOutputStream(targetFile);
+        long copySize = IoUtil.copy(inputStream, out, IoUtil.DEFAULT_BUFFER_SIZE);
         fileUrl = upLoadPath + fileName;
         if (inputStream != null) {
             inputStream.close();
@@ -39,6 +45,9 @@ public class UploadFileUtil {
 
             outputStream.close();
 
+        }
+        if (out!=null){
+            out.close();
         }
         return fileUrl;
     }

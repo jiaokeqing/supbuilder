@@ -1,0 +1,123 @@
+package com.supbuilder.file.async;
+
+
+import com.jacob.activeX.ActiveXComponent;
+import com.jacob.com.Dispatch;
+import com.jacob.com.Variant;
+import com.supbuilder.common.core.constant.FileHandleTypeConstants;
+import com.supbuilder.common.core.constant.FileTypeSuffixConstants;
+import com.supbuilder.common.core.util.RedisUtil;
+import com.supbuilder.file.api.constant.FileStatusEnum;
+import com.supbuilder.file.api.vo.FileHandleVO;
+import com.supbuilder.file.utils.UploadFileUtil;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Async;
+import org.springframework.stereotype.Component;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
+/**
+ * @author 矫克清
+ */
+@Component
+public class ConverseService {
+    static final int wdFormatPDF = 17;// PDF 格式
+
+    @Autowired
+    private RedisUtil redisUtil;
+
+    @Async
+    public void wordToPdf(String sourceFile, String targetFile, String downloadUrl, String fileId) {
+        System.out.println("启动Word转pdf处理程序...");
+
+        long start = System.currentTimeMillis();
+        ActiveXComponent app = null;
+        Dispatch doc = null;
+
+
+        try {
+            app = new ActiveXComponent("Word.Application");
+            app.setProperty("Visible", new Variant(false));
+            Dispatch docs = app.getProperty("Documents").toDispatch();
+
+
+            doc = Dispatch.call(docs, "Open", sourceFile).toDispatch();
+            System.out.println("打开文档..." + sourceFile);
+            System.out.println("转换文档到PDF..." + targetFile);
+            File tofile = new File(targetFile);
+            if (tofile.exists()) {
+                tofile.delete();
+            }
+            Dispatch.call(doc,
+                    "SaveAs",
+                    targetFile,
+                    wdFormatPDF);
+            long end = System.currentTimeMillis();
+            System.out.println("转换完成..用时：" + (end - start) + "ms.");
+            app.invoke("Quit");
+
+
+            //更新处理结果
+            FileHandleVO fileHandleVO = new FileHandleVO(fileId, downloadUrl, FileStatusEnum.SUCCESS, "文件处理成功");
+            redisUtil.hset(FileHandleTypeConstants.FILE_CONVERSE, fileId, fileHandleVO, 1800);
+        } catch (Exception e) {
+
+            e.printStackTrace();
+            if (app != null) {
+                app.invoke("Close");
+            }
+            FileHandleVO fileHandleVO = new FileHandleVO(fileId, null, FileStatusEnum.FAIL, "文件处理失败");
+            redisUtil.hset(FileHandleTypeConstants.FILE_CONVERSE, fileId, fileHandleVO, 1800);
+        }
+
+
+    }
+    @Async
+    public void pdfToDocx(String sourceFile, String targetFile, String downloadUrl, String fileId) {
+        System.out.println("启动Pdf转word处理程序...");
+        System.out.println(targetFile);
+        long start = System.currentTimeMillis();
+        ActiveXComponent app = null;
+        Dispatch doc = null;
+
+        try {
+
+
+            File inPath = new File(sourceFile);
+            File outPath = new File(targetFile);
+
+
+            //pdfActiveX PDDoc对象 主要建立PDF对象
+            app = new ActiveXComponent("AcroExch.PDDoc");
+            //PDF控制对象
+            Dispatch pdfObject = app.getObject();
+            //打开PDF文件，建立PDF操作的开始
+            Dispatch.call(pdfObject, "Open", new Variant(inPath.getAbsolutePath()));
+            Variant jsObj = Dispatch.call(pdfObject, "GetJSObject");
+            Dispatch.call(jsObj.getDispatch(), "SaveAs", outPath.getPath(), "com.adobe.acrobat.docx");
+            app.invoke("Close");
+
+
+            long end = System.currentTimeMillis();
+            System.out.println("转换完成..用时：" + (end - start) + "ms.");
+
+            //更新处理结果
+                FileHandleVO fileHandleVO=new FileHandleVO(fileId,downloadUrl, FileStatusEnum.SUCCESS,"文件处理成功");
+            redisUtil.hset(FileHandleTypeConstants.FILE_CONVERSE, fileId, fileHandleVO, 1800);
+        } catch (Exception e) {
+
+            e.printStackTrace();
+            if (app!=null){
+                app.invoke("Close");
+            }
+            FileHandleVO fileHandleVO=new FileHandleVO(fileId,null, FileStatusEnum.FAIL,"文件处理失败");
+            redisUtil.hset(FileHandleTypeConstants.FILE_CONVERSE, fileId, fileHandleVO, 1800);
+        }
+
+    }
+
+}

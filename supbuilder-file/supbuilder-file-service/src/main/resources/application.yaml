@@ -29,6 +29,8 @@ spring:
         max-wait: -1ms  #最大建立连接等待时间。如果超过此时间将接到异常。设为-1表示无限制。
         min-idle: 0     #最小等待连接中的数量,设 0 为没有限制
 
+
+
 # mybatisPlus
 mybatis-plus:
   # 开启mybatisPlus日志（输出到控制台）
@@ -50,8 +52,8 @@ supbuilder:
 
   converse:
     upload:
-      path: C:\Users\矫克清\Desktop\converse\pdf\
+      path: C:\Users\矫克清\Desktop\converse\upload\
     result:
-      path: C:\Users\矫克清\Desktop\converse\word\
+      path: C:\Users\矫克清\Desktop\converse\result\
     download:
       url: /usr/local/
