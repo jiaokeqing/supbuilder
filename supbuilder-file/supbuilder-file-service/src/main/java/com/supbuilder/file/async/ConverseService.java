@@ -1,5 +1,6 @@
 package com.supbuilder.file.async;
 
+import com.aspose.pdf.SaveFormat;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.Image;
 import com.itextpdf.text.Rectangle;
@@ -302,5 +303,44 @@ public class ConverseService {
         }
 
     }
+
+
+    /**
+     * pdf转pptx
+     * @param sourceFile
+     * @param targetFile
+     * @param downloadUrl
+     * @param fileId
+     */
+    @Async
+    public void pdf2Ppt(String sourceFile, String targetFile, String downloadUrl, String fileId) {
+        System.out.println("启动pdf转ppt处理程序...");
+        long start = System.currentTimeMillis();
+
+
+        try {
+
+            FileOutputStream os = new FileOutputStream(targetFile);
+            com.aspose.pdf.Document doc = new com.aspose.pdf.Document(sourceFile);
+            doc.save(os, SaveFormat.Pptx);
+            os.close();
+
+
+            System.out.println("pdf转换文档到ppt..." + targetFile);
+            long end = System.currentTimeMillis();
+            System.out.println("转换完成..用时：" + (end - start) + "ms.");
+
+            //更新处理结果
+            FileHandleVO fileHandleVO = new FileHandleVO(fileId, downloadUrl, FileStatusEnum.SUCCESS, "文件处理成功");
+            redisUtil.hset(FileHandleTypeConstants.FILE_CONVERSE, fileId, fileHandleVO, 1800);
+        } catch (Exception e) {
+
+            e.printStackTrace();
+            FileHandleVO fileHandleVO = new FileHandleVO(fileId, null, FileStatusEnum.FAIL, "文件处理失败");
+            redisUtil.hset(FileHandleTypeConstants.FILE_CONVERSE, fileId, fileHandleVO, 1800);
+        }
+
+    }
+
 
 }

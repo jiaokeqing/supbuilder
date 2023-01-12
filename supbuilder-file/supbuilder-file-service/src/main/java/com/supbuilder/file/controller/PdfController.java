@@ -29,4 +29,15 @@ public class PdfController {
         return R.ok(fileHandleVO,"文件正在处理，请稍等...");
     }
 
+    @PostMapping("/toPpt")
+    public R toPpt(@RequestParam(value = "file",required = true) MultipartFile pdfFile) {
+
+//        isX=true;
+        String fileId= UUID.randomUUID().toString();
+        pdfService.toPpt(pdfFile,fileId);
+
+        FileHandleVO fileHandleVO=new FileHandleVO(fileId,null, FileStatusEnum.ING,"文件正在处理，请稍等...");
+        return R.ok(fileHandleVO,"文件正在处理，请稍等...");
+    }
+
 }

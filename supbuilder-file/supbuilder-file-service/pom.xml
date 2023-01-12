@@ -73,7 +73,22 @@
             <groupId>com.itextpdf</groupId>
             <artifactId>itextpdf</artifactId>
         </dependency>
+        <!--pdf转其他格式-->
+        <dependency>
+            <groupId>com.aspose</groupId>
+            <artifactId>aspose-pdf</artifactId>
+            <version>22.12</version>
+            <scope>system</scope>
+            <systemPath>${pom.basedir}/src/main/resources/lib/aspose-pdf-22.12.jar</systemPath>
+        </dependency>
 
+        <dependency>
+            <groupId>com.jacob</groupId>
+            <artifactId>jacob</artifactId>
+            <version>1.20</version>
+            <scope>system</scope>
+            <systemPath>${pom.basedir}/src/main/resources/lib/jacob.jar</systemPath>
+        </dependency>
 
     </dependencies>
 

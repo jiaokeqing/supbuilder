@@ -12,5 +12,7 @@ public interface FileTypeSuffixConstants {
     String DOC_SUFFIX=".doc";
     String XLS_SUFFIX=".xls";
     String XLSX_SUFFIX=".xlsx";
+    String PPT_SUFFIX = ".ppt";
+    String PPTX_SUFFIX = ".pptx";
 
 }
