@@ -18,4 +18,6 @@ public interface FileTypeSuffixConstants {
     String ZIP_SUFFIX=".zip";
     String PNG_SUFFIX=".png";
     String JPEG_SUFFIX=".jpeg";
+    String TXT_SUFFIX=".txt";
+
 }

@@ -25,4 +25,12 @@ public interface PdfService {
      * @param fileId
      */
     void toImg(MultipartFile pdfFile,String fileId,Integer type);
+
+    /**
+     * pdf转txt
+     * @param pdfFile
+     * @param fileId
+     */
+    void toTxt(MultipartFile pdfFile,String fileId);
+
 }

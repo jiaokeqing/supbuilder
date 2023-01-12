@@ -1,6 +1,7 @@
 package com.supbuilder.file.async;
 
 import com.aspose.pdf.SaveFormat;
+import com.aspose.pdf.TextAbsorber;
 import com.aspose.pdf.devices.PngDevice;
 import com.aspose.pdf.devices.Resolution;
 import com.itextpdf.text.Document;
@@ -22,9 +23,7 @@ import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.OutputStream;
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -421,6 +420,46 @@ public class ConverseService {
 
 
             //todo 将解析后的图片进行压缩
+
+
+            //更新处理结果
+            FileHandleVO fileHandleVO = new FileHandleVO(fileId, downloadUrl, FileStatusEnum.SUCCESS, "文件处理成功");
+            redisUtil.hset(FileHandleTypeConstants.FILE_CONVERSE, fileId, fileHandleVO, 1800);
+        } catch (Exception e) {
+
+            e.printStackTrace();
+            FileHandleVO fileHandleVO = new FileHandleVO(fileId, null, FileStatusEnum.FAIL, "文件处理失败");
+            redisUtil.hset(FileHandleTypeConstants.FILE_CONVERSE, fileId, fileHandleVO, 1800);
+        }
+
+    }
+
+    /**
+     * pdf转txt
+     * @param sourceFile
+     * @param targetFile
+     * @param downloadUrl
+     * @param fileId
+     */
+    @Async
+    public void pdf2Txt(String sourceFile, String targetFile, String downloadUrl, String fileId) {
+        System.out.println("启动pdf转txt处理程序...");
+        long start = System.currentTimeMillis();
+        com.aspose.pdf.Document pdfDocument = new  com.aspose.pdf.Document(sourceFile);
+        TextAbsorber ta = new TextAbsorber();
+        ta.visit(pdfDocument);
+
+        try {
+
+            BufferedWriter writer = new BufferedWriter(new FileWriter(targetFile));
+            writer.write(ta.getText());
+            writer.close();
+
+
+            System.out.println("pdf转换文档到txt..." + targetFile);
+            long end = System.currentTimeMillis();
+            System.out.println("转换完成..用时：" + (end - start) + "ms.");
+
 
 
             //更新处理结果

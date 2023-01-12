@@ -56,4 +56,15 @@ public class PdfController {
         FileHandleVO fileHandleVO = new FileHandleVO(fileId, null, FileStatusEnum.ING, "文件正在处理，请稍等...");
         return R.ok(fileHandleVO, "文件正在处理，请稍等...");
     }
+
+    @PostMapping("/toTxt")
+    public R toTxt(@RequestParam(value = "file", required = true) MultipartFile pdfFile) {
+        String fileId = UUID.randomUUID().toString();
+        pdfService.toTxt(pdfFile, fileId);
+
+        FileHandleVO fileHandleVO = new FileHandleVO(fileId, null, FileStatusEnum.ING, "文件正在处理，请稍等...");
+        return R.ok(fileHandleVO, "文件正在处理，请稍等...");
+    }
+
+
 }
