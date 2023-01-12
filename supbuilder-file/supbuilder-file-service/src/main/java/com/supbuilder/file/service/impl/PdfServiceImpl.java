@@ -138,4 +138,38 @@ public class PdfServiceImpl implements PdfService {
         }
     }
 
+    @Override
+    public void toImg(MultipartFile pdfFile, String fileId, Integer type) {
+        String timeDir = System.currentTimeMillis() + File.separator;
+        try {
+            //创建转换目录
+            Path converseDir = Paths.get(conversedResultPath + timeDir);
+            Files.createDirectory(converseDir);
+
+            String sourceFile = null;
+            sourceFile = UploadFileUtil.uploadFile(pdfFile, converseUploadPath + timeDir);
+            String name = FileNameUtil.mainName(sourceFile);
+            String targetFile = conversedResultPath + timeDir;
+            String downloadUrl = converseDownLoadUrl + timeDir + name + FileTypeSuffixConstants.ZIP_SUFFIX;
+
+            if (type==0){
+                converseService.pdf2Img(sourceFile, targetFile, downloadUrl, fileId,FileTypeSuffixConstants.PNG_SUFFIX);
+            }else {
+                converseService.pdf2Img(sourceFile, targetFile, downloadUrl, fileId,FileTypeSuffixConstants.JPEG_SUFFIX);
+            }
+
+
+            FileHandleVO fileHandleVO = new FileHandleVO(fileId, null, FileStatusEnum.ING, "文件正在处理，请稍等...");
+            //处理结果
+            redisUtil.hset(FileHandleTypeConstants.FILE_CONVERSE, fileId, fileHandleVO, 1800);
+
+
+        } catch (Exception e) {
+
+            e.printStackTrace();
+            FileHandleVO fileHandleVO = new FileHandleVO(fileId, null, FileStatusEnum.FAIL, "文件处理失败");
+            redisUtil.hset(FileHandleTypeConstants.FILE_CONVERSE, fileId, fileHandleVO, 1800);
+        }
+    }
+
 }

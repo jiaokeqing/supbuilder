@@ -47,4 +47,13 @@ public class PdfController {
         FileHandleVO fileHandleVO = new FileHandleVO(fileId, null, FileStatusEnum.ING, "文件正在处理，请稍等...");
         return R.ok(fileHandleVO, "文件正在处理，请稍等...");
     }
+
+    @PostMapping("/toImg")
+    public R toImg(@RequestParam(value = "file", required = true) MultipartFile pdfFile,@RequestParam("type")Integer type) {
+        String fileId = UUID.randomUUID().toString();
+        pdfService.toImg(pdfFile, fileId,type);
+
+        FileHandleVO fileHandleVO = new FileHandleVO(fileId, null, FileStatusEnum.ING, "文件正在处理，请稍等...");
+        return R.ok(fileHandleVO, "文件正在处理，请稍等...");
+    }
 }

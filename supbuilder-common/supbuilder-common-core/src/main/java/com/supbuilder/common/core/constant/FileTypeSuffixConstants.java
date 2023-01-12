@@ -15,4 +15,7 @@ public interface FileTypeSuffixConstants {
     String PPT_SUFFIX = ".ppt";
     String PPTX_SUFFIX = ".pptx";
 
+    String ZIP_SUFFIX=".zip";
+    String PNG_SUFFIX=".png";
+    String JPEG_SUFFIX=".jpeg";
 }

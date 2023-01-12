@@ -18,4 +18,11 @@ public interface PdfService {
      * @param fileId
      */
     void toExcel(MultipartFile pdfFile,String fileId);
+
+    /**
+     * pdf转图片  0 png  1 jpg
+     * @param pdfFile
+     * @param fileId
+     */
+    void toImg(MultipartFile pdfFile,String fileId,Integer type);
 }

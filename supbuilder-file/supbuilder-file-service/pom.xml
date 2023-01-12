@@ -77,9 +77,9 @@
         <dependency>
             <groupId>com.aspose</groupId>
             <artifactId>aspose-pdf</artifactId>
-            <version>22.12</version>
+            <version>22.2</version>
             <scope>system</scope>
-            <systemPath>${pom.basedir}/src/main/resources/lib/aspose-pdf-22.12.jar</systemPath>
+            <systemPath>${pom.basedir}/src/main/resources/lib/aspose.pdf-22.2.jar</systemPath>
         </dependency>
 
         <dependency>
