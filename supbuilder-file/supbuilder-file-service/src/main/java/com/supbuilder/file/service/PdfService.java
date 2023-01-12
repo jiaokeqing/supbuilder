@@ -12,4 +12,10 @@ public interface PdfService {
      */
     void toPpt(MultipartFile pdfFile,String fileId);
 
+    /**
+     * pdf转excel  xlsx
+     * @param pdfFile
+     * @param fileId
+     */
+    void toExcel(MultipartFile pdfFile,String fileId);
 }

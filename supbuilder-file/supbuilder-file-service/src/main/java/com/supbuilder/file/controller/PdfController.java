@@ -21,23 +21,30 @@ public class PdfController {
     private final PdfService pdfService;
 
     @PostMapping("/toDocx")
-    public R toWord(@RequestParam(value = "file",required = true) MultipartFile pdfFile) {
-        String fileId= UUID.randomUUID().toString();
-        pdfService.toWord(pdfFile,fileId);
+    public R toWord(@RequestParam(value = "file", required = true) MultipartFile pdfFile) {
+        String fileId = UUID.randomUUID().toString();
+        pdfService.toWord(pdfFile, fileId);
 
-        FileHandleVO fileHandleVO=new FileHandleVO(fileId,null, FileStatusEnum.ING,"文件正在处理，请稍等...");
-        return R.ok(fileHandleVO,"文件正在处理，请稍等...");
+        FileHandleVO fileHandleVO = new FileHandleVO(fileId, null, FileStatusEnum.ING, "文件正在处理，请稍等...");
+        return R.ok(fileHandleVO, "文件正在处理，请稍等...");
     }
 
     @PostMapping("/toPpt")
-    public R toPpt(@RequestParam(value = "file",required = true) MultipartFile pdfFile) {
+    public R toPpt(@RequestParam(value = "file", required = true) MultipartFile pdfFile) {
+        String fileId = UUID.randomUUID().toString();
+        pdfService.toPpt(pdfFile, fileId);
 
-//        isX=true;
-        String fileId= UUID.randomUUID().toString();
-        pdfService.toPpt(pdfFile,fileId);
-
-        FileHandleVO fileHandleVO=new FileHandleVO(fileId,null, FileStatusEnum.ING,"文件正在处理，请稍等...");
-        return R.ok(fileHandleVO,"文件正在处理，请稍等...");
+        FileHandleVO fileHandleVO = new FileHandleVO(fileId, null, FileStatusEnum.ING, "文件正在处理，请稍等...");
+        return R.ok(fileHandleVO, "文件正在处理，请稍等...");
     }
 
+
+    @PostMapping("/toExcel")
+    public R toExcel(@RequestParam(value = "file", required = true) MultipartFile pdfFile) {
+        String fileId = UUID.randomUUID().toString();
+        pdfService.toExcel(pdfFile, fileId);
+
+        FileHandleVO fileHandleVO = new FileHandleVO(fileId, null, FileStatusEnum.ING, "文件正在处理，请稍等...");
+        return R.ok(fileHandleVO, "文件正在处理，请稍等...");
+    }
 }
