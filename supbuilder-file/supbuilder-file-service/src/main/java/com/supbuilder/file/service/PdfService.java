@@ -32,5 +32,10 @@ public interface PdfService {
      * @param fileId
      */
     void toTxt(MultipartFile pdfFile,String fileId);
-
+    /**
+     * pdf转html
+     * @param pdfFile
+     * @param fileId
+     */
+    void toHtml(MultipartFile pdfFile,String fileId);
 }

@@ -19,5 +19,6 @@ public interface FileTypeSuffixConstants {
     String PNG_SUFFIX=".png";
     String JPEG_SUFFIX=".jpeg";
     String TXT_SUFFIX=".txt";
+    String HTML_SUFFIX=".html";
 
 }
