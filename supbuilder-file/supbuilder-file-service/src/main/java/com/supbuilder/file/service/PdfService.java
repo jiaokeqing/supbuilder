@@ -48,5 +48,20 @@ public interface PdfService {
      */
     void pdfMerge(MultipartFile[] pdfFiles, String fileId);
 
+    /**
+     * pdf 按页拆分 拆分单个文件页数
+     * @param pdfFile
+     * @param splitSize 拆分单个文件页数
+     * @param fileId
+     */
     void pdfSplit(MultipartFile pdfFile,Integer splitSize, String fileId);
+
+    /**
+     * pdf按范围拆分
+     * @param pdfFile
+     * @param range "1-7"表示复制1到7页、"8-"表示复制从第八页之后到文档末尾
+     * @param fileId
+     */
+    void pdfSplitByRange(MultipartFile pdfFile,String  range, String fileId);
+
 }

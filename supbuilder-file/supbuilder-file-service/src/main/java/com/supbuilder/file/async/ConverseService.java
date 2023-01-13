@@ -9,10 +9,7 @@ import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.Image;
 import com.itextpdf.text.Rectangle;
-import com.itextpdf.text.pdf.PdfCopy;
-import com.itextpdf.text.pdf.PdfImportedPage;
-import com.itextpdf.text.pdf.PdfReader;
-import com.itextpdf.text.pdf.PdfWriter;
+import com.itextpdf.text.pdf.*;
 import com.jacob.activeX.ActiveXComponent;
 import com.jacob.com.ComThread;
 import com.jacob.com.Dispatch;
@@ -570,7 +567,14 @@ public class ConverseService {
 
     }
 
-
+    /**
+     * pdf 按页拆分
+     * @param sourceFile
+     * @param targetFile
+     * @param downloadUrl
+     * @param fileId
+     * @param splitSize 拆分单个文件页数
+     */
     @Async
     public void pdfSplit(String sourceFile,String targetFile, String downloadUrl, String fileId,int splitSize) {
         System.out.println("启动pdf按页拆分处理程序...");
@@ -589,7 +593,6 @@ public class ConverseService {
             while (pageNumber <= numberOfPages) {
                 Document doc = new Document();
                 String splitFileName = targetFile.substring(0, targetFile.length() - 4)  + "_" + newFileCount + FileTypeSuffixConstants.PDF_SUFFIX;
-                System.out.println(splitFileName);
                 PdfCopy  pdfCopy = new PdfCopy(doc, new FileOutputStream(splitFileName));
                 doc.open();
                 // 将pdf按页复制到新建的PDF中
@@ -620,7 +623,43 @@ public class ConverseService {
 
     }
 
+    /**
+     * pdf按范围拆分
+     * @param sourceFile
+     * @param targetFile
+     * @param downloadUrl
+     * @param fileId
+     * @param range "1-7"表示复制1到7页、"8-"表示复制从第八页之后到文档末尾
+     */
+    @Async
+    public void pdfSplitByRange(String sourceFile,String targetFile, String downloadUrl, String fileId,String range) {
+        System.out.println("启动pdf按范围拆分处理程序...");
+        long start = System.currentTimeMillis();
 
+
+        try {
+            PdfReader pdfReader = new PdfReader(sourceFile);
+            PdfStamper pdfStamper = new PdfStamper(pdfReader , new FileOutputStream(targetFile));
+            pdfReader.selectPages(range);
+            pdfStamper.close();
+
+            System.out.println("pdf按范围拆分文档..." + targetFile);
+            long end = System.currentTimeMillis();
+            System.out.println("转换完成..用时：" + (end - start) + "ms.");
+
+
+            //todo  压缩为zip
+
+            //更新处理结果
+            FileHandleVO fileHandleVO = new FileHandleVO(fileId, downloadUrl, FileStatusEnum.SUCCESS, "文件处理成功");
+            redisUtil.hset(FileHandleTypeConstants.FILE_CONVERSE, fileId, fileHandleVO, 1800);
+        } catch (Exception e) {
+            e.printStackTrace();
+            FileHandleVO fileHandleVO = new FileHandleVO(fileId, null, FileStatusEnum.FAIL, "文件处理失败");
+            redisUtil.hset(FileHandleTypeConstants.FILE_CONVERSE, fileId, fileHandleVO, 1800);
+        }
+
+    }
 
 
     private byte[] inputStream2byte(InputStream inputStream) {
