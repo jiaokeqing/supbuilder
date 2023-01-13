@@ -1,10 +1,12 @@
 package com.supbuilder.file.async;
 
+import cn.hutool.core.io.file.FileNameUtil;
 import com.aspose.pdf.SaveFormat;
 import com.aspose.pdf.TextAbsorber;
 import com.aspose.pdf.devices.PngDevice;
 import com.aspose.pdf.devices.Resolution;
 import com.itextpdf.text.Document;
+import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.Image;
 import com.itextpdf.text.Rectangle;
 import com.itextpdf.text.pdf.PdfCopy;
@@ -17,6 +19,7 @@ import com.jacob.com.Dispatch;
 import com.jacob.com.Variant;
 import com.supbuilder.common.core.constant.FileHandleTypeConstants;
 
+import com.supbuilder.common.core.constant.FileTypeSuffixConstants;
 import com.supbuilder.common.core.util.RedisUtil;
 import com.supbuilder.file.api.constant.FileStatusEnum;
 import com.supbuilder.file.api.vo.FileHandleVO;
@@ -566,6 +569,59 @@ public class ConverseService {
         }
 
     }
+
+
+    @Async
+    public void pdfSplit(String sourceFile,String targetFile, String downloadUrl, String fileId,int splitSize) {
+        System.out.println("启动pdf按页拆分处理程序...");
+        long start = System.currentTimeMillis();
+        PdfReader reader;
+
+        String name = FileNameUtil.mainName(sourceFile);
+
+        try {
+            reader = new PdfReader(sourceFile);
+
+            int numberOfPages = reader.getNumberOfPages();
+            int newFileCount = 0;
+            // PageNumber是从1开始计数的
+            int pageNumber = 1;
+            while (pageNumber <= numberOfPages) {
+                Document doc = new Document();
+                String splitFileName = targetFile.substring(0, targetFile.length() - 4)  + "_" + newFileCount + FileTypeSuffixConstants.PDF_SUFFIX;
+                System.out.println(splitFileName);
+                PdfCopy  pdfCopy = new PdfCopy(doc, new FileOutputStream(splitFileName));
+                doc.open();
+                // 将pdf按页复制到新建的PDF中
+                for (int i = 1; pageNumber <= numberOfPages && i <= splitSize; ++i, pageNumber++) {
+                    doc.newPage();
+                    PdfImportedPage page = pdfCopy.getImportedPage(reader, pageNumber);
+                    pdfCopy.addPage(page);
+                }
+                doc.close();
+                newFileCount++;
+                pdfCopy.close();
+            }
+            System.out.println("pdf按页拆分文档..." + targetFile);
+            long end = System.currentTimeMillis();
+            System.out.println("转换完成..用时：" + (end - start) + "ms.");
+
+
+            //todo  压缩为zip
+
+            //更新处理结果
+            FileHandleVO fileHandleVO = new FileHandleVO(fileId, downloadUrl, FileStatusEnum.SUCCESS, "文件处理成功");
+            redisUtil.hset(FileHandleTypeConstants.FILE_CONVERSE, fileId, fileHandleVO, 1800);
+        } catch (Exception e) {
+            e.printStackTrace();
+            FileHandleVO fileHandleVO = new FileHandleVO(fileId, null, FileStatusEnum.FAIL, "文件处理失败");
+            redisUtil.hset(FileHandleTypeConstants.FILE_CONVERSE, fileId, fileHandleVO, 1800);
+        }
+
+    }
+
+
+
 
     private byte[] inputStream2byte(InputStream inputStream) {
         byte[] buffer = new byte[0];

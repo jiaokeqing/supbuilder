@@ -3,6 +3,7 @@ package com.supbuilder.file.controller;
 import com.supbuilder.common.core.util.R;
 import com.supbuilder.file.api.constant.FileStatusEnum;
 import com.supbuilder.file.api.vo.FileHandleVO;
+import com.supbuilder.file.api.vo.PdfSplitParamVO;
 import com.supbuilder.file.service.PdfService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -77,6 +78,23 @@ public class PdfController {
     public R toWord(@RequestPart("files") MultipartFile[] pdfFileList) {
         String fileId= UUID.randomUUID().toString();
         pdfService.pdfMerge(pdfFileList,fileId);
+
+        FileHandleVO fileHandleVO=new FileHandleVO(fileId,null, FileStatusEnum.ING,"文件正在处理，请稍等...");
+        return R.ok(fileHandleVO,"文件正在处理，请稍等...");
+    }
+
+    @PostMapping("/split")
+    public R toWord(@RequestParam(value = "file", required = true) MultipartFile pdfFile,
+                    @RequestParam(value = "type", required = true) int type,
+                    @RequestParam(value = "splitSize", required = false) int splitSize,
+                    @RequestParam(value = "range", required = false) String range) {
+        String fileId= UUID.randomUUID().toString();
+        if (type==0){
+            pdfService.pdfSplit(pdfFile,splitSize,fileId);
+        }else {
+
+        }
+
 
         FileHandleVO fileHandleVO=new FileHandleVO(fileId,null, FileStatusEnum.ING,"文件正在处理，请稍等...");
         return R.ok(fileHandleVO,"文件正在处理，请稍等...");

@@ -154,10 +154,10 @@ public class PdfServiceImpl implements PdfService {
             String targetFile = conversedResultPath + timeDir;
             String downloadUrl = converseDownLoadUrl + timeDir + name + FileTypeSuffixConstants.ZIP_SUFFIX;
 
-            if (type==0){
-                converseService.pdf2Img(sourceFile, targetFile, downloadUrl, fileId,FileTypeSuffixConstants.PNG_SUFFIX);
-            }else {
-                converseService.pdf2Img(sourceFile, targetFile, downloadUrl, fileId,FileTypeSuffixConstants.JPEG_SUFFIX);
+            if (type == 0) {
+                converseService.pdf2Img(sourceFile, targetFile, downloadUrl, fileId, FileTypeSuffixConstants.PNG_SUFFIX);
+            } else {
+                converseService.pdf2Img(sourceFile, targetFile, downloadUrl, fileId, FileTypeSuffixConstants.JPEG_SUFFIX);
             }
 
 
@@ -242,17 +242,46 @@ public class PdfServiceImpl implements PdfService {
             Path converseDir = Paths.get(conversedResultPath + timeDir);
             Files.createDirectory(converseDir);
 
-            List<String> sourceFiles=new ArrayList<>();
+            List<String> sourceFiles = new ArrayList<>();
             String sourceFile = null;
-            for (MultipartFile pdfFile:pdfFiles){
+            for (MultipartFile pdfFile : pdfFiles) {
                 sourceFile = UploadFileUtil.uploadFile(pdfFile, converseUploadPath + timeDir);
                 sourceFiles.add(sourceFile);
             }
-            String name = System.currentTimeMillis()+"";
+            String name = System.currentTimeMillis() + "";
             String targetFile = conversedResultPath + timeDir + name + FileTypeSuffixConstants.PDF_SUFFIX;
             String downloadUrl = converseDownLoadUrl + timeDir + name + FileTypeSuffixConstants.PDF_SUFFIX;
 
             converseService.pdfMerge(sourceFiles, targetFile, downloadUrl, fileId);
+
+
+            FileHandleVO fileHandleVO = new FileHandleVO(fileId, null, FileStatusEnum.ING, "文件正在处理，请稍等...");
+            //处理结果
+            redisUtil.hset(FileHandleTypeConstants.FILE_CONVERSE, fileId, fileHandleVO, 1800);
+
+
+        } catch (Exception e) {
+
+            e.printStackTrace();
+            FileHandleVO fileHandleVO = new FileHandleVO(fileId, null, FileStatusEnum.FAIL, "文件处理失败");
+            redisUtil.hset(FileHandleTypeConstants.FILE_CONVERSE, fileId, fileHandleVO, 1800);
+        }
+    }
+
+    @Override
+    public void pdfSplit(MultipartFile pdfFile, Integer splitSize, String fileId) {
+        String timeDir = System.currentTimeMillis() + File.separator;
+        try {
+            //创建转换目录
+            Path converseDir = Paths.get(conversedResultPath + timeDir);
+            Files.createDirectory(converseDir);
+
+            String sourceFile = UploadFileUtil.uploadFile(pdfFile, converseUploadPath + timeDir);
+            String name = FileNameUtil.mainName(sourceFile);
+            String targetFile = conversedResultPath + timeDir + name + FileTypeSuffixConstants.ZIP_SUFFIX;
+            String downloadUrl = converseDownLoadUrl + timeDir + name + FileTypeSuffixConstants.ZIP_SUFFIX;
+
+            converseService.pdfSplit(sourceFile, targetFile, downloadUrl, fileId, splitSize);
 
 
             FileHandleVO fileHandleVO = new FileHandleVO(fileId, null, FileStatusEnum.ING, "文件正在处理，请稍等...");

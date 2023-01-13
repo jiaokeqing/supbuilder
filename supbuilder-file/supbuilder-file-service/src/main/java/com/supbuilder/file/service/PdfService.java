@@ -47,4 +47,6 @@ public interface PdfService {
      * @param fileId
      */
     void pdfMerge(MultipartFile[] pdfFiles, String fileId);
+
+    void pdfSplit(MultipartFile pdfFile,Integer splitSize, String fileId);
 }
