@@ -1,686 +1,240 @@
-2023-01-12 14:50:06,863 [background-preinit] INFO  [org.hibernate.validator.internal.util.Version] Version.java:21 - HV000001: Hibernate Validator 6.2.5.Final
-2023-01-12 14:50:06,884 [main] INFO  [com.supbuilder.file.FileServiceApplication] StartupInfoLogger.java:55 - Starting FileServiceApplication using Java 1.8.0_291 on DESKTOP-ED18TFD with PID 9704 (C:\Users\矫克清\IdeaProjects\supbuilder\supbuilder-file\supbuilder-file-service\target\classes started by 矫克清 in C:\Users\矫克清\IdeaProjects\supbuilder)
-2023-01-12 14:50:06,885 [main] INFO  [com.supbuilder.file.FileServiceApplication] SpringApplication.java:637 - The following 1 profile is active: "default"
-2023-01-12 14:50:09,849 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:262 - Multiple Spring Data modules found, entering strict repository configuration mode
-2023-01-12 14:50:09,857 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:132 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2023-01-12 14:50:09,891 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:201 - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
-2023-01-12 14:50:10,073 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[com.supbuilder.file]' package. Please check your configuration.
-2023-01-12 14:50:10,131 [main] INFO  [o.springframework.cloud.context.scope.GenericScope] GenericScope.java:283 - BeanFactory id=a01e55ea-977c-3150-8f35-90b21eddd6cd
-2023-01-12 14:50:10,234 [main] INFO  [c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor] EnableEncryptablePropertiesBeanFactoryPostProcessor.java:50 - Post-processing PropertySource instances
-2023-01-12 14:50:10,286 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
-2023-01-12 14:50:10,287 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
-2023-01-12 14:50:10,287 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
-2023-01-12 14:50:10,288 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
-2023-01-12 14:50:10,288 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
-2023-01-12 14:50:10,288 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
-2023-01-12 14:50:10,288 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource cachedrandom [org.springframework.cloud.util.random.CachedRandomPropertySource] to EncryptablePropertySourceWrapper
-2023-01-12 14:50:10,288 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource springCloudClientHostInfo [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
-2023-01-12 14:50:10,288 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource Config resource 'class path resource [application.yaml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
-2023-01-12 14:50:10,341 [main] INFO  [c.u.j.filter.DefaultLazyPropertyFilter] DefaultLazyPropertyFilter.java:31 - Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
-2023-01-12 14:50:10,866 [main] INFO  [c.u.j.resolver.DefaultLazyPropertyResolver] DefaultLazyPropertyResolver.java:31 - Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
-2023-01-12 14:50:10,868 [main] INFO  [c.u.j.detector.DefaultLazyPropertyDetector] DefaultLazyPropertyDetector.java:30 - Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
-2023-01-12 14:50:11,871 [main] WARN  [io.undertow.websockets.jsr] Bootstrap.java:68 - UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
-2023-01-12 14:50:11,923 [main] INFO  [io.undertow.servlet] ServletContextImpl.java:388 - Initializing Spring embedded WebApplicationContext
-2023-01-12 14:50:11,924 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] ServletWebServerApplicationContext.java:292 - Root WebApplicationContext: initialization completed in 4997 ms
-2023-01-12 14:50:13,594 [main] INFO  [c.alibaba.cloud.sentinel.SentinelWebMvcConfigurer] SentinelWebMvcConfigurer.java:52 - [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
-2023-01-12 14:50:14,292 [main] WARN  [io.springboot.sms.core.SmsClient] SmsClient.java:49 - 阿里云短信通道未配置,短信发送暂不可用
-2023-01-12 14:50:15,088 [main] INFO  [o.s.b.actuate.endpoint.web.EndpointLinksResolver] EndpointLinksResolver.java:58 - Exposing 1 endpoint(s) beneath base path '/actuator'
-2023-01-12 14:50:15,399 [main] INFO  [io.undertow] Undertow.java:120 - starting server: Undertow - 2.2.22.Final
-2023-01-12 14:50:15,405 [main] INFO  [org.xnio] Xnio.java:95 - XNIO version 3.8.7.Final
-2023-01-12 14:50:15,413 [main] INFO  [org.xnio.nio] NioXnio.java:58 - XNIO NIO Implementation Version 3.8.7.Final
-2023-01-12 14:50:15,445 [main] INFO  [org.jboss.threads] Version.java:52 - JBoss Threads version 3.1.0.Final
-2023-01-12 14:50:15,497 [main] INFO  [o.s.boot.web.embedded.undertow.UndertowWebServer] UndertowWebServer.java:119 - Undertow started on port(s) 21106 (http) with context path '/supbuilder'
-2023-01-12 14:50:15,679 [main] INFO  [com.supbuilder.file.FileServiceApplication] StartupInfoLogger.java:61 - Started FileServiceApplication in 9.996 seconds (JVM running for 11.362)
-2023-01-12 14:50:27,042 [RMI TCP Connection(1)-192.168.100.141] INFO  [com.zaxxer.hikari.HikariDataSource] HikariDataSource.java:110 - HikariPool-1 - Starting...
-2023-01-12 14:50:27,415 [RMI TCP Connection(4)-192.168.100.141] INFO  [io.undertow.servlet] ServletContextImpl.java:388 - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-01-12 14:50:27,415 [RMI TCP Connection(4)-192.168.100.141] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:525 - Initializing Servlet 'dispatcherServlet'
-2023-01-12 14:50:27,417 [RMI TCP Connection(4)-192.168.100.141] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:547 - Completed initialization in 1 ms
-2023-01-12 14:50:27,843 [RMI TCP Connection(1)-192.168.100.141] INFO  [com.zaxxer.hikari.HikariDataSource] HikariDataSource.java:123 - HikariPool-1 - Start completed.
-2023-01-12 14:54:36,791 [background-preinit] INFO  [org.hibernate.validator.internal.util.Version] Version.java:21 - HV000001: Hibernate Validator 6.2.5.Final
-2023-01-12 14:54:36,802 [main] INFO  [com.supbuilder.file.FileServiceApplication] StartupInfoLogger.java:55 - Starting FileServiceApplication using Java 1.8.0_291 on DESKTOP-ED18TFD with PID 13584 (C:\Users\矫克清\IdeaProjects\supbuilder\supbuilder-file\supbuilder-file-service\target\classes started by 矫克清 in C:\Users\矫克清\IdeaProjects\supbuilder)
-2023-01-12 14:54:36,802 [main] INFO  [com.supbuilder.file.FileServiceApplication] SpringApplication.java:637 - The following 1 profile is active: "default"
-2023-01-12 14:54:37,780 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:262 - Multiple Spring Data modules found, entering strict repository configuration mode
-2023-01-12 14:54:37,782 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:132 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2023-01-12 14:54:37,800 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:201 - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
-2023-01-12 14:54:37,951 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[com.supbuilder.file]' package. Please check your configuration.
-2023-01-12 14:54:38,008 [main] INFO  [o.springframework.cloud.context.scope.GenericScope] GenericScope.java:283 - BeanFactory id=a01e55ea-977c-3150-8f35-90b21eddd6cd
-2023-01-12 14:54:38,054 [main] INFO  [c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor] EnableEncryptablePropertiesBeanFactoryPostProcessor.java:50 - Post-processing PropertySource instances
-2023-01-12 14:54:38,101 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
-2023-01-12 14:54:38,103 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
-2023-01-12 14:54:38,103 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
-2023-01-12 14:54:38,103 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
-2023-01-12 14:54:38,104 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
-2023-01-12 14:54:38,104 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
-2023-01-12 14:54:38,104 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource cachedrandom [org.springframework.cloud.util.random.CachedRandomPropertySource] to EncryptablePropertySourceWrapper
-2023-01-12 14:54:38,104 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource springCloudClientHostInfo [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
-2023-01-12 14:54:38,104 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource Config resource 'class path resource [application.yaml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
-2023-01-12 14:54:38,159 [main] INFO  [c.u.j.filter.DefaultLazyPropertyFilter] DefaultLazyPropertyFilter.java:31 - Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
-2023-01-12 14:54:38,438 [main] INFO  [c.u.j.resolver.DefaultLazyPropertyResolver] DefaultLazyPropertyResolver.java:31 - Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
-2023-01-12 14:54:38,440 [main] INFO  [c.u.j.detector.DefaultLazyPropertyDetector] DefaultLazyPropertyDetector.java:30 - Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
-2023-01-12 14:54:38,565 [main] WARN  [io.undertow.websockets.jsr] Bootstrap.java:68 - UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
-2023-01-12 14:54:38,585 [main] INFO  [io.undertow.servlet] ServletContextImpl.java:388 - Initializing Spring embedded WebApplicationContext
-2023-01-12 14:54:38,586 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] ServletWebServerApplicationContext.java:292 - Root WebApplicationContext: initialization completed in 1743 ms
-2023-01-12 14:54:39,325 [main] INFO  [c.alibaba.cloud.sentinel.SentinelWebMvcConfigurer] SentinelWebMvcConfigurer.java:52 - [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
-2023-01-12 14:54:39,924 [main] WARN  [io.springboot.sms.core.SmsClient] SmsClient.java:49 - 阿里云短信通道未配置,短信发送暂不可用
-2023-01-12 14:54:40,403 [main] INFO  [o.s.b.actuate.endpoint.web.EndpointLinksResolver] EndpointLinksResolver.java:58 - Exposing 1 endpoint(s) beneath base path '/actuator'
-2023-01-12 14:54:40,545 [main] INFO  [io.undertow] Undertow.java:120 - starting server: Undertow - 2.2.22.Final
-2023-01-12 14:54:40,552 [main] INFO  [org.xnio] Xnio.java:95 - XNIO version 3.8.7.Final
-2023-01-12 14:54:40,559 [main] INFO  [org.xnio.nio] NioXnio.java:58 - XNIO NIO Implementation Version 3.8.7.Final
-2023-01-12 14:54:40,590 [main] INFO  [org.jboss.threads] Version.java:52 - JBoss Threads version 3.1.0.Final
-2023-01-12 14:54:40,632 [main] INFO  [o.s.boot.web.embedded.undertow.UndertowWebServer] UndertowWebServer.java:119 - Undertow started on port(s) 21106 (http) with context path '/supbuilder'
-2023-01-12 14:54:40,818 [main] INFO  [com.supbuilder.file.FileServiceApplication] StartupInfoLogger.java:61 - Started FileServiceApplication in 4.717 seconds (JVM running for 5.424)
-2023-01-12 14:54:41,589 [RMI TCP Connection(3)-192.168.100.141] INFO  [io.undertow.servlet] ServletContextImpl.java:388 - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-01-12 14:54:41,589 [RMI TCP Connection(3)-192.168.100.141] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:525 - Initializing Servlet 'dispatcherServlet'
-2023-01-12 14:54:41,591 [RMI TCP Connection(3)-192.168.100.141] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:547 - Completed initialization in 2 ms
-2023-01-12 14:54:41,610 [RMI TCP Connection(2)-192.168.100.141] INFO  [com.zaxxer.hikari.HikariDataSource] HikariDataSource.java:110 - HikariPool-1 - Starting...
-2023-01-12 14:54:42,252 [RMI TCP Connection(2)-192.168.100.141] INFO  [com.zaxxer.hikari.HikariDataSource] HikariDataSource.java:123 - HikariPool-1 - Start completed.
-2023-01-12 14:55:42,035 [background-preinit] INFO  [org.hibernate.validator.internal.util.Version] Version.java:21 - HV000001: Hibernate Validator 6.2.5.Final
-2023-01-12 14:55:42,049 [main] INFO  [com.supbuilder.file.FileServiceApplication] StartupInfoLogger.java:55 - Starting FileServiceApplication using Java 1.8.0_291 on DESKTOP-ED18TFD with PID 28752 (C:\Users\矫克清\IdeaProjects\supbuilder\supbuilder-file\supbuilder-file-service\target\classes started by 矫克清 in C:\Users\矫克清\IdeaProjects\supbuilder)
-2023-01-12 14:55:42,050 [main] INFO  [com.supbuilder.file.FileServiceApplication] SpringApplication.java:637 - The following 1 profile is active: "default"
-2023-01-12 14:55:43,113 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:262 - Multiple Spring Data modules found, entering strict repository configuration mode
-2023-01-12 14:55:43,115 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:132 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2023-01-12 14:55:43,133 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:201 - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
-2023-01-12 14:55:43,284 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[com.supbuilder.file]' package. Please check your configuration.
-2023-01-12 14:55:43,344 [main] INFO  [o.springframework.cloud.context.scope.GenericScope] GenericScope.java:283 - BeanFactory id=a01e55ea-977c-3150-8f35-90b21eddd6cd
-2023-01-12 14:55:43,389 [main] INFO  [c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor] EnableEncryptablePropertiesBeanFactoryPostProcessor.java:50 - Post-processing PropertySource instances
-2023-01-12 14:55:43,436 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
-2023-01-12 14:55:43,437 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
-2023-01-12 14:55:43,437 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
-2023-01-12 14:55:43,438 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
-2023-01-12 14:55:43,438 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
-2023-01-12 14:55:43,438 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
-2023-01-12 14:55:43,438 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource cachedrandom [org.springframework.cloud.util.random.CachedRandomPropertySource] to EncryptablePropertySourceWrapper
-2023-01-12 14:55:43,439 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource springCloudClientHostInfo [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
-2023-01-12 14:55:43,439 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource Config resource 'class path resource [application.yaml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
-2023-01-12 14:55:43,498 [main] INFO  [c.u.j.filter.DefaultLazyPropertyFilter] DefaultLazyPropertyFilter.java:31 - Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
-2023-01-12 14:55:43,775 [main] INFO  [c.u.j.resolver.DefaultLazyPropertyResolver] DefaultLazyPropertyResolver.java:31 - Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
-2023-01-12 14:55:43,776 [main] INFO  [c.u.j.detector.DefaultLazyPropertyDetector] DefaultLazyPropertyDetector.java:30 - Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
-2023-01-12 14:55:43,925 [main] WARN  [io.undertow.websockets.jsr] Bootstrap.java:68 - UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
-2023-01-12 14:55:43,946 [main] INFO  [io.undertow.servlet] ServletContextImpl.java:388 - Initializing Spring embedded WebApplicationContext
-2023-01-12 14:55:43,946 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] ServletWebServerApplicationContext.java:292 - Root WebApplicationContext: initialization completed in 1847 ms
-2023-01-12 14:55:44,668 [main] INFO  [c.alibaba.cloud.sentinel.SentinelWebMvcConfigurer] SentinelWebMvcConfigurer.java:52 - [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
-2023-01-12 14:55:45,335 [main] WARN  [io.springboot.sms.core.SmsClient] SmsClient.java:49 - 阿里云短信通道未配置,短信发送暂不可用
-2023-01-12 14:55:45,873 [main] INFO  [o.s.b.actuate.endpoint.web.EndpointLinksResolver] EndpointLinksResolver.java:58 - Exposing 1 endpoint(s) beneath base path '/actuator'
-2023-01-12 14:55:46,039 [main] INFO  [io.undertow] Undertow.java:120 - starting server: Undertow - 2.2.22.Final
-2023-01-12 14:55:46,046 [main] INFO  [org.xnio] Xnio.java:95 - XNIO version 3.8.7.Final
-2023-01-12 14:55:46,054 [main] INFO  [org.xnio.nio] NioXnio.java:58 - XNIO NIO Implementation Version 3.8.7.Final
-2023-01-12 14:55:46,088 [main] INFO  [org.jboss.threads] Version.java:52 - JBoss Threads version 3.1.0.Final
-2023-01-12 14:55:46,129 [main] INFO  [o.s.boot.web.embedded.undertow.UndertowWebServer] UndertowWebServer.java:119 - Undertow started on port(s) 21106 (http) with context path '/supbuilder'
-2023-01-12 14:55:46,310 [main] INFO  [com.supbuilder.file.FileServiceApplication] StartupInfoLogger.java:61 - Started FileServiceApplication in 4.933 seconds (JVM running for 5.656)
-2023-01-12 14:55:46,583 [RMI TCP Connection(6)-192.168.100.141] INFO  [io.undertow.servlet] ServletContextImpl.java:388 - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-01-12 14:55:46,584 [RMI TCP Connection(6)-192.168.100.141] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:525 - Initializing Servlet 'dispatcherServlet'
-2023-01-12 14:55:46,585 [RMI TCP Connection(6)-192.168.100.141] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:547 - Completed initialization in 1 ms
-2023-01-12 14:55:46,611 [RMI TCP Connection(5)-192.168.100.141] INFO  [com.zaxxer.hikari.HikariDataSource] HikariDataSource.java:110 - HikariPool-1 - Starting...
-2023-01-12 14:55:47,155 [RMI TCP Connection(5)-192.168.100.141] INFO  [com.zaxxer.hikari.HikariDataSource] HikariDataSource.java:123 - HikariPool-1 - Start completed.
-2023-01-12 15:05:26,236 [background-preinit] INFO  [org.hibernate.validator.internal.util.Version] Version.java:21 - HV000001: Hibernate Validator 6.2.5.Final
-2023-01-12 15:05:26,249 [main] INFO  [com.supbuilder.file.FileServiceApplication] StartupInfoLogger.java:55 - Starting FileServiceApplication using Java 1.8.0_291 on DESKTOP-ED18TFD with PID 18468 (C:\Users\矫克清\IdeaProjects\supbuilder\supbuilder-file\supbuilder-file-service\target\classes started by 矫克清 in C:\Users\矫克清\IdeaProjects\supbuilder)
-2023-01-12 15:05:26,249 [main] INFO  [com.supbuilder.file.FileServiceApplication] SpringApplication.java:637 - The following 1 profile is active: "default"
-2023-01-12 15:05:27,229 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:262 - Multiple Spring Data modules found, entering strict repository configuration mode
-2023-01-12 15:05:27,231 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:132 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2023-01-12 15:05:27,249 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:201 - Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
-2023-01-12 15:05:27,403 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[com.supbuilder.file]' package. Please check your configuration.
-2023-01-12 15:05:27,462 [main] INFO  [o.springframework.cloud.context.scope.GenericScope] GenericScope.java:283 - BeanFactory id=a01e55ea-977c-3150-8f35-90b21eddd6cd
-2023-01-12 15:05:27,509 [main] INFO  [c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor] EnableEncryptablePropertiesBeanFactoryPostProcessor.java:50 - Post-processing PropertySource instances
-2023-01-12 15:05:27,555 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
-2023-01-12 15:05:27,557 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
-2023-01-12 15:05:27,557 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
-2023-01-12 15:05:27,557 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
-2023-01-12 15:05:27,558 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
-2023-01-12 15:05:27,558 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
-2023-01-12 15:05:27,558 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource cachedrandom [org.springframework.cloud.util.random.CachedRandomPropertySource] to EncryptablePropertySourceWrapper
-2023-01-12 15:05:27,558 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource springCloudClientHostInfo [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
-2023-01-12 15:05:27,558 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource Config resource 'class path resource [application.yaml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
-2023-01-12 15:05:27,612 [main] INFO  [c.u.j.filter.DefaultLazyPropertyFilter] DefaultLazyPropertyFilter.java:31 - Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
-2023-01-12 15:05:27,849 [main] INFO  [c.u.j.resolver.DefaultLazyPropertyResolver] DefaultLazyPropertyResolver.java:31 - Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
-2023-01-12 15:05:27,850 [main] INFO  [c.u.j.detector.DefaultLazyPropertyDetector] DefaultLazyPropertyDetector.java:30 - Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
-2023-01-12 15:05:27,972 [main] WARN  [io.undertow.websockets.jsr] Bootstrap.java:68 - UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
-2023-01-12 15:05:27,992 [main] INFO  [io.undertow.servlet] ServletContextImpl.java:388 - Initializing Spring embedded WebApplicationContext
-2023-01-12 15:05:27,992 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] ServletWebServerApplicationContext.java:292 - Root WebApplicationContext: initialization completed in 1699 ms
-2023-01-12 15:05:28,694 [main] INFO  [c.alibaba.cloud.sentinel.SentinelWebMvcConfigurer] SentinelWebMvcConfigurer.java:52 - [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
-2023-01-12 15:05:29,274 [main] WARN  [io.springboot.sms.core.SmsClient] SmsClient.java:49 - 阿里云短信通道未配置,短信发送暂不可用
-2023-01-12 15:05:29,756 [main] INFO  [o.s.b.actuate.endpoint.web.EndpointLinksResolver] EndpointLinksResolver.java:58 - Exposing 1 endpoint(s) beneath base path '/actuator'
-2023-01-12 15:05:29,894 [main] INFO  [io.undertow] Undertow.java:120 - starting server: Undertow - 2.2.22.Final
-2023-01-12 15:05:29,900 [main] INFO  [org.xnio] Xnio.java:95 - XNIO version 3.8.7.Final
-2023-01-12 15:05:29,906 [main] INFO  [org.xnio.nio] NioXnio.java:58 - XNIO NIO Implementation Version 3.8.7.Final
-2023-01-12 15:05:29,936 [main] INFO  [org.jboss.threads] Version.java:52 - JBoss Threads version 3.1.0.Final
-2023-01-12 15:05:29,975 [main] INFO  [o.s.boot.web.embedded.undertow.UndertowWebServer] UndertowWebServer.java:119 - Undertow started on port(s) 21106 (http) with context path '/supbuilder'
-2023-01-12 15:05:30,153 [main] INFO  [com.supbuilder.file.FileServiceApplication] StartupInfoLogger.java:61 - Started FileServiceApplication in 4.666 seconds (JVM running for 5.447)
-2023-01-12 15:05:30,783 [RMI TCP Connection(4)-192.168.100.141] INFO  [io.undertow.servlet] ServletContextImpl.java:388 - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-01-12 15:05:30,784 [RMI TCP Connection(4)-192.168.100.141] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:525 - Initializing Servlet 'dispatcherServlet'
-2023-01-12 15:05:30,786 [RMI TCP Connection(4)-192.168.100.141] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:547 - Completed initialization in 2 ms
-2023-01-12 15:05:30,802 [RMI TCP Connection(5)-192.168.100.141] INFO  [com.zaxxer.hikari.HikariDataSource] HikariDataSource.java:110 - HikariPool-1 - Starting...
-2023-01-12 15:05:31,434 [RMI TCP Connection(5)-192.168.100.141] INFO  [com.zaxxer.hikari.HikariDataSource] HikariDataSource.java:123 - HikariPool-1 - Start completed.
-2023-01-12 15:10:09,262 [background-preinit] INFO  [org.hibernate.validator.internal.util.Version] Version.java:21 - HV000001: Hibernate Validator 6.2.5.Final
-2023-01-12 15:10:09,273 [main] INFO  [com.supbuilder.file.FileServiceApplication] StartupInfoLogger.java:55 - Starting FileServiceApplication using Java 1.8.0_291 on DESKTOP-ED18TFD with PID 20228 (C:\Users\矫克清\IdeaProjects\supbuilder\supbuilder-file\supbuilder-file-service\target\classes started by 矫克清 in C:\Users\矫克清\IdeaProjects\supbuilder)
-2023-01-12 15:10:09,274 [main] INFO  [com.supbuilder.file.FileServiceApplication] SpringApplication.java:637 - The following 1 profile is active: "default"
-2023-01-12 15:10:10,246 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:262 - Multiple Spring Data modules found, entering strict repository configuration mode
-2023-01-12 15:10:10,248 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:132 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2023-01-12 15:10:10,267 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:201 - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
-2023-01-12 15:10:10,416 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[com.supbuilder.file]' package. Please check your configuration.
-2023-01-12 15:10:10,475 [main] INFO  [o.springframework.cloud.context.scope.GenericScope] GenericScope.java:283 - BeanFactory id=a01e55ea-977c-3150-8f35-90b21eddd6cd
-2023-01-12 15:10:10,520 [main] INFO  [c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor] EnableEncryptablePropertiesBeanFactoryPostProcessor.java:50 - Post-processing PropertySource instances
-2023-01-12 15:10:10,565 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
-2023-01-12 15:10:10,566 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
-2023-01-12 15:10:10,566 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
-2023-01-12 15:10:10,567 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
-2023-01-12 15:10:10,567 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
-2023-01-12 15:10:10,567 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
-2023-01-12 15:10:10,567 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource cachedrandom [org.springframework.cloud.util.random.CachedRandomPropertySource] to EncryptablePropertySourceWrapper
-2023-01-12 15:10:10,568 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource springCloudClientHostInfo [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
-2023-01-12 15:10:10,568 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource Config resource 'class path resource [application.yaml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
-2023-01-12 15:10:10,623 [main] INFO  [c.u.j.filter.DefaultLazyPropertyFilter] DefaultLazyPropertyFilter.java:31 - Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
-2023-01-12 15:10:10,890 [main] INFO  [c.u.j.resolver.DefaultLazyPropertyResolver] DefaultLazyPropertyResolver.java:31 - Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
-2023-01-12 15:10:10,892 [main] INFO  [c.u.j.detector.DefaultLazyPropertyDetector] DefaultLazyPropertyDetector.java:30 - Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
-2023-01-12 15:10:11,015 [main] WARN  [io.undertow.websockets.jsr] Bootstrap.java:68 - UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
-2023-01-12 15:10:11,036 [main] INFO  [io.undertow.servlet] ServletContextImpl.java:388 - Initializing Spring embedded WebApplicationContext
-2023-01-12 15:10:11,036 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] ServletWebServerApplicationContext.java:292 - Root WebApplicationContext: initialization completed in 1723 ms
-2023-01-12 15:10:11,749 [main] INFO  [c.alibaba.cloud.sentinel.SentinelWebMvcConfigurer] SentinelWebMvcConfigurer.java:52 - [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
-2023-01-12 15:10:12,356 [main] WARN  [io.springboot.sms.core.SmsClient] SmsClient.java:49 - 阿里云短信通道未配置,短信发送暂不可用
-2023-01-12 15:10:12,835 [main] INFO  [o.s.b.actuate.endpoint.web.EndpointLinksResolver] EndpointLinksResolver.java:58 - Exposing 1 endpoint(s) beneath base path '/actuator'
-2023-01-12 15:10:12,976 [main] INFO  [io.undertow] Undertow.java:120 - starting server: Undertow - 2.2.22.Final
-2023-01-12 15:10:12,982 [main] INFO  [org.xnio] Xnio.java:95 - XNIO version 3.8.7.Final
-2023-01-12 15:10:12,989 [main] INFO  [org.xnio.nio] NioXnio.java:58 - XNIO NIO Implementation Version 3.8.7.Final
-2023-01-12 15:10:13,021 [main] INFO  [org.jboss.threads] Version.java:52 - JBoss Threads version 3.1.0.Final
-2023-01-12 15:10:13,062 [main] INFO  [o.s.boot.web.embedded.undertow.UndertowWebServer] UndertowWebServer.java:119 - Undertow started on port(s) 21106 (http) with context path '/supbuilder'
-2023-01-12 15:10:13,246 [main] INFO  [com.supbuilder.file.FileServiceApplication] StartupInfoLogger.java:61 - Started FileServiceApplication in 4.68 seconds (JVM running for 5.394)
-2023-01-12 15:10:13,648 [RMI TCP Connection(1)-192.168.100.141] INFO  [io.undertow.servlet] ServletContextImpl.java:388 - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-01-12 15:10:13,648 [RMI TCP Connection(1)-192.168.100.141] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:525 - Initializing Servlet 'dispatcherServlet'
-2023-01-12 15:10:13,650 [RMI TCP Connection(1)-192.168.100.141] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:547 - Completed initialization in 2 ms
-2023-01-12 15:10:13,665 [RMI TCP Connection(2)-192.168.100.141] INFO  [com.zaxxer.hikari.HikariDataSource] HikariDataSource.java:110 - HikariPool-1 - Starting...
-2023-01-12 15:10:14,243 [RMI TCP Connection(2)-192.168.100.141] INFO  [com.zaxxer.hikari.HikariDataSource] HikariDataSource.java:123 - HikariPool-1 - Start completed.
-2023-01-12 15:22:58,389 [background-preinit] INFO  [org.hibernate.validator.internal.util.Version] Version.java:21 - HV000001: Hibernate Validator 6.2.5.Final
-2023-01-12 15:22:58,400 [main] INFO  [com.supbuilder.file.FileServiceApplication] StartupInfoLogger.java:55 - Starting FileServiceApplication using Java 1.8.0_291 on DESKTOP-ED18TFD with PID 9620 (C:\Users\矫克清\IdeaProjects\supbuilder\supbuilder-file\supbuilder-file-service\target\classes started by 矫克清 in C:\Users\矫克清\IdeaProjects\supbuilder)
-2023-01-12 15:22:58,401 [main] INFO  [com.supbuilder.file.FileServiceApplication] SpringApplication.java:637 - The following 1 profile is active: "default"
-2023-01-12 15:22:59,365 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:262 - Multiple Spring Data modules found, entering strict repository configuration mode
-2023-01-12 15:22:59,367 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:132 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2023-01-12 15:22:59,386 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:201 - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
-2023-01-12 15:22:59,534 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[com.supbuilder.file]' package. Please check your configuration.
-2023-01-12 15:22:59,593 [main] INFO  [o.springframework.cloud.context.scope.GenericScope] GenericScope.java:283 - BeanFactory id=a01e55ea-977c-3150-8f35-90b21eddd6cd
-2023-01-12 15:22:59,638 [main] INFO  [c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor] EnableEncryptablePropertiesBeanFactoryPostProcessor.java:50 - Post-processing PropertySource instances
-2023-01-12 15:22:59,686 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
-2023-01-12 15:22:59,687 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
-2023-01-12 15:22:59,687 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
-2023-01-12 15:22:59,687 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
-2023-01-12 15:22:59,687 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
-2023-01-12 15:22:59,687 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
-2023-01-12 15:22:59,687 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource cachedrandom [org.springframework.cloud.util.random.CachedRandomPropertySource] to EncryptablePropertySourceWrapper
-2023-01-12 15:22:59,687 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource springCloudClientHostInfo [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
-2023-01-12 15:22:59,687 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource Config resource 'class path resource [application.yaml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
-2023-01-12 15:22:59,744 [main] INFO  [c.u.j.filter.DefaultLazyPropertyFilter] DefaultLazyPropertyFilter.java:31 - Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
-2023-01-12 15:23:00,013 [main] INFO  [c.u.j.resolver.DefaultLazyPropertyResolver] DefaultLazyPropertyResolver.java:31 - Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
-2023-01-12 15:23:00,015 [main] INFO  [c.u.j.detector.DefaultLazyPropertyDetector] DefaultLazyPropertyDetector.java:30 - Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
-2023-01-12 15:23:00,139 [main] WARN  [io.undertow.websockets.jsr] Bootstrap.java:68 - UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
-2023-01-12 15:23:00,160 [main] INFO  [io.undertow.servlet] ServletContextImpl.java:388 - Initializing Spring embedded WebApplicationContext
-2023-01-12 15:23:00,160 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] ServletWebServerApplicationContext.java:292 - Root WebApplicationContext: initialization completed in 1718 ms
-2023-01-12 15:23:00,888 [main] INFO  [c.alibaba.cloud.sentinel.SentinelWebMvcConfigurer] SentinelWebMvcConfigurer.java:52 - [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
-2023-01-12 15:23:01,483 [main] WARN  [io.springboot.sms.core.SmsClient] SmsClient.java:49 - 阿里云短信通道未配置,短信发送暂不可用
-2023-01-12 15:23:01,957 [main] INFO  [o.s.b.actuate.endpoint.web.EndpointLinksResolver] EndpointLinksResolver.java:58 - Exposing 1 endpoint(s) beneath base path '/actuator'
-2023-01-12 15:23:02,096 [main] INFO  [io.undertow] Undertow.java:120 - starting server: Undertow - 2.2.22.Final
-2023-01-12 15:23:02,102 [main] INFO  [org.xnio] Xnio.java:95 - XNIO version 3.8.7.Final
-2023-01-12 15:23:02,109 [main] INFO  [org.xnio.nio] NioXnio.java:58 - XNIO NIO Implementation Version 3.8.7.Final
-2023-01-12 15:23:02,142 [main] INFO  [org.jboss.threads] Version.java:52 - JBoss Threads version 3.1.0.Final
-2023-01-12 15:23:02,188 [main] INFO  [o.s.boot.web.embedded.undertow.UndertowWebServer] UndertowWebServer.java:119 - Undertow started on port(s) 21106 (http) with context path '/supbuilder'
-2023-01-12 15:23:02,370 [main] INFO  [com.supbuilder.file.FileServiceApplication] StartupInfoLogger.java:61 - Started FileServiceApplication in 4.684 seconds (JVM running for 5.412)
-2023-01-12 15:23:02,946 [RMI TCP Connection(3)-192.168.100.141] INFO  [io.undertow.servlet] ServletContextImpl.java:388 - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-01-12 15:23:02,946 [RMI TCP Connection(3)-192.168.100.141] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:525 - Initializing Servlet 'dispatcherServlet'
-2023-01-12 15:23:02,948 [RMI TCP Connection(3)-192.168.100.141] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:547 - Completed initialization in 2 ms
-2023-01-12 15:23:02,965 [RMI TCP Connection(2)-192.168.100.141] INFO  [com.zaxxer.hikari.HikariDataSource] HikariDataSource.java:110 - HikariPool-1 - Starting...
-2023-01-12 15:23:03,562 [RMI TCP Connection(2)-192.168.100.141] INFO  [com.zaxxer.hikari.HikariDataSource] HikariDataSource.java:123 - HikariPool-1 - Start completed.
-2023-01-12 15:23:35,681 [XNIO-1 task-1] ERROR [c.s.c.f.sentinel.handle.GlobalBizExceptionHandler] GlobalBizExceptionHandler.java:41 - 全局异常信息 ex=Request method 'GET' not supported
-org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
-	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:256)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:442)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:383)
-	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:125)
-	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:67)
-	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:498)
-	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1265)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1047)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:645)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:750)
-	at io.undertow.servlet.handlers.ServletHandler.handleRequest(ServletHandler.java:74)
-	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:129)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
-	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
-	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
-	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
-	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
-	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
-	at io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84)
-	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
-	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:68)
-	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
-	at io.undertow.servlet.handlers.RedirectDirHandler.handleRequest(RedirectDirHandler.java:68)
-	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:117)
-	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
-	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
-	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
-	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
-	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
-	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
-	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
-	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
-	at io.undertow.servlet.handlers.SendErrorPageHandler.handleRequest(SendErrorPageHandler.java:52)
-	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
-	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:275)
-	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:79)
-	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:134)
-	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:131)
-	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
-	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
-	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:255)
-	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:79)
-	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:100)
-	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:393)
-	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:852)
-	at org.jboss.threads.ContextClassLoaderSavingRunnable.run(ContextClassLoaderSavingRunnable.java:35)
-	at org.jboss.threads.EnhancedQueueExecutor.safeRun(EnhancedQueueExecutor.java:2019)
-	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.doRunTask(EnhancedQueueExecutor.java:1558)
-	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1423)
-	at org.xnio.XnioWorker$WorkerThreadFactory$1$1.run(XnioWorker.java:1282)
+2023-01-13 11:16:23,609 [lettuce-nioEventLoop-4-2] INFO  [io.lettuce.core.protocol.CommandHandler] AbstractInternalLogger.java:217 - null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:259)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
 	at java.lang.Thread.run(Thread.java:748)
-2023-01-12 15:43:02,564 [background-preinit] INFO  [org.hibernate.validator.internal.util.Version] Version.java:21 - HV000001: Hibernate Validator 6.2.5.Final
-2023-01-12 15:43:02,576 [main] INFO  [com.supbuilder.file.FileServiceApplication] StartupInfoLogger.java:55 - Starting FileServiceApplication using Java 1.8.0_291 on DESKTOP-ED18TFD with PID 31668 (C:\Users\矫克清\IdeaProjects\supbuilder\supbuilder-file\supbuilder-file-service\target\classes started by 矫克清 in C:\Users\矫克清\IdeaProjects\supbuilder)
-2023-01-12 15:43:02,576 [main] INFO  [com.supbuilder.file.FileServiceApplication] SpringApplication.java:637 - The following 1 profile is active: "default"
-2023-01-12 15:43:03,566 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:262 - Multiple Spring Data modules found, entering strict repository configuration mode
-2023-01-12 15:43:03,568 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:132 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2023-01-12 15:43:03,587 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:201 - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
-2023-01-12 15:43:03,738 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[com.supbuilder.file]' package. Please check your configuration.
-2023-01-12 15:43:03,796 [main] INFO  [o.springframework.cloud.context.scope.GenericScope] GenericScope.java:283 - BeanFactory id=a01e55ea-977c-3150-8f35-90b21eddd6cd
-2023-01-12 15:43:03,841 [main] INFO  [c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor] EnableEncryptablePropertiesBeanFactoryPostProcessor.java:50 - Post-processing PropertySource instances
-2023-01-12 15:43:03,887 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
-2023-01-12 15:43:03,888 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
-2023-01-12 15:43:03,888 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
-2023-01-12 15:43:03,889 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
-2023-01-12 15:43:03,889 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
-2023-01-12 15:43:03,889 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
-2023-01-12 15:43:03,889 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource cachedrandom [org.springframework.cloud.util.random.CachedRandomPropertySource] to EncryptablePropertySourceWrapper
-2023-01-12 15:43:03,890 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource springCloudClientHostInfo [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
-2023-01-12 15:43:03,890 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource Config resource 'class path resource [application.yaml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
-2023-01-12 15:43:03,946 [main] INFO  [c.u.j.filter.DefaultLazyPropertyFilter] DefaultLazyPropertyFilter.java:31 - Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
-2023-01-12 15:43:04,216 [main] INFO  [c.u.j.resolver.DefaultLazyPropertyResolver] DefaultLazyPropertyResolver.java:31 - Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
-2023-01-12 15:43:04,217 [main] INFO  [c.u.j.detector.DefaultLazyPropertyDetector] DefaultLazyPropertyDetector.java:30 - Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
-2023-01-12 15:43:04,340 [main] WARN  [io.undertow.websockets.jsr] Bootstrap.java:68 - UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
-2023-01-12 15:43:04,360 [main] INFO  [io.undertow.servlet] ServletContextImpl.java:388 - Initializing Spring embedded WebApplicationContext
-2023-01-12 15:43:04,361 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] ServletWebServerApplicationContext.java:292 - Root WebApplicationContext: initialization completed in 1742 ms
-2023-01-12 15:43:05,078 [main] INFO  [c.alibaba.cloud.sentinel.SentinelWebMvcConfigurer] SentinelWebMvcConfigurer.java:52 - [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
-2023-01-12 15:43:05,667 [main] WARN  [io.springboot.sms.core.SmsClient] SmsClient.java:49 - 阿里云短信通道未配置,短信发送暂不可用
-2023-01-12 15:43:06,143 [main] INFO  [o.s.b.actuate.endpoint.web.EndpointLinksResolver] EndpointLinksResolver.java:58 - Exposing 1 endpoint(s) beneath base path '/actuator'
-2023-01-12 15:43:06,284 [main] INFO  [io.undertow] Undertow.java:120 - starting server: Undertow - 2.2.22.Final
-2023-01-12 15:43:06,290 [main] INFO  [org.xnio] Xnio.java:95 - XNIO version 3.8.7.Final
-2023-01-12 15:43:06,298 [main] INFO  [org.xnio.nio] NioXnio.java:58 - XNIO NIO Implementation Version 3.8.7.Final
-2023-01-12 15:43:06,329 [main] INFO  [org.jboss.threads] Version.java:52 - JBoss Threads version 3.1.0.Final
-2023-01-12 15:43:06,371 [main] INFO  [o.s.boot.web.embedded.undertow.UndertowWebServer] UndertowWebServer.java:119 - Undertow started on port(s) 21106 (http) with context path '/supbuilder'
-2023-01-12 15:43:06,549 [main] INFO  [com.supbuilder.file.FileServiceApplication] StartupInfoLogger.java:61 - Started FileServiceApplication in 4.655 seconds (JVM running for 5.471)
-2023-01-12 15:43:06,954 [RMI TCP Connection(1)-192.168.100.141] INFO  [com.zaxxer.hikari.HikariDataSource] HikariDataSource.java:110 - HikariPool-1 - Starting...
-2023-01-12 15:43:07,163 [RMI TCP Connection(3)-192.168.100.141] INFO  [io.undertow.servlet] ServletContextImpl.java:388 - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-01-12 15:43:07,163 [RMI TCP Connection(3)-192.168.100.141] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:525 - Initializing Servlet 'dispatcherServlet'
-2023-01-12 15:43:07,165 [RMI TCP Connection(3)-192.168.100.141] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:547 - Completed initialization in 1 ms
-2023-01-12 15:43:07,474 [RMI TCP Connection(1)-192.168.100.141] INFO  [com.zaxxer.hikari.HikariDataSource] HikariDataSource.java:123 - HikariPool-1 - Start completed.
-2023-01-12 15:43:48,175 [XNIO-1 task-1] ERROR [c.s.c.f.sentinel.handle.GlobalBizExceptionHandler] GlobalBizExceptionHandler.java:41 - 全局异常信息 ex=Request method 'GET' not supported
-org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
-	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:256)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:442)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:383)
-	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:125)
-	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:67)
-	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:498)
-	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1265)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1047)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:645)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:750)
-	at io.undertow.servlet.handlers.ServletHandler.handleRequest(ServletHandler.java:74)
-	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:129)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
-	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
-	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
-	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
-	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
-	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
-	at io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84)
-	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
-	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:68)
-	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
-	at io.undertow.servlet.handlers.RedirectDirHandler.handleRequest(RedirectDirHandler.java:68)
-	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:117)
-	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
-	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
-	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
-	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
-	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
-	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
-	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
-	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
-	at io.undertow.servlet.handlers.SendErrorPageHandler.handleRequest(SendErrorPageHandler.java:52)
-	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
-	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:275)
-	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:79)
-	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:134)
-	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:131)
-	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
-	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
-	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:255)
-	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:79)
-	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:100)
-	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:393)
-	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:852)
-	at org.jboss.threads.ContextClassLoaderSavingRunnable.run(ContextClassLoaderSavingRunnable.java:35)
-	at org.jboss.threads.EnhancedQueueExecutor.safeRun(EnhancedQueueExecutor.java:2019)
-	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.doRunTask(EnhancedQueueExecutor.java:1558)
-	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1423)
-	at org.xnio.XnioWorker$WorkerThreadFactory$1$1.run(XnioWorker.java:1282)
+2023-01-13 11:16:23,609 [lettuce-nioEventLoop-4-1] INFO  [io.lettuce.core.protocol.CommandHandler] AbstractInternalLogger.java:217 - null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:259)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
 	at java.lang.Thread.run(Thread.java:748)
-2023-01-12 16:03:00,780 [background-preinit] INFO  [org.hibernate.validator.internal.util.Version] Version.java:21 - HV000001: Hibernate Validator 6.2.5.Final
-2023-01-12 16:03:00,792 [main] INFO  [com.supbuilder.file.FileServiceApplication] StartupInfoLogger.java:55 - Starting FileServiceApplication using Java 1.8.0_291 on DESKTOP-ED18TFD with PID 12276 (C:\Users\矫克清\IdeaProjects\supbuilder\supbuilder-file\supbuilder-file-service\target\classes started by 矫克清 in C:\Users\矫克清\IdeaProjects\supbuilder)
-2023-01-12 16:03:00,793 [main] INFO  [com.supbuilder.file.FileServiceApplication] SpringApplication.java:637 - The following 1 profile is active: "default"
-2023-01-12 16:03:02,092 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:262 - Multiple Spring Data modules found, entering strict repository configuration mode
-2023-01-12 16:03:02,094 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:132 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2023-01-12 16:03:02,171 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:201 - Finished Spring Data repository scanning in 65 ms. Found 0 Redis repository interfaces.
-2023-01-12 16:03:02,463 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[com.supbuilder.file]' package. Please check your configuration.
-2023-01-12 16:03:02,621 [main] INFO  [o.springframework.cloud.context.scope.GenericScope] GenericScope.java:283 - BeanFactory id=a01e55ea-977c-3150-8f35-90b21eddd6cd
-2023-01-12 16:03:02,747 [main] INFO  [c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor] EnableEncryptablePropertiesBeanFactoryPostProcessor.java:50 - Post-processing PropertySource instances
-2023-01-12 16:03:03,191 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
-2023-01-12 16:03:03,192 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
-2023-01-12 16:03:03,193 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
-2023-01-12 16:03:03,212 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
-2023-01-12 16:03:03,213 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
-2023-01-12 16:03:03,213 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
-2023-01-12 16:03:03,213 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource cachedrandom [org.springframework.cloud.util.random.CachedRandomPropertySource] to EncryptablePropertySourceWrapper
-2023-01-12 16:03:03,214 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource springCloudClientHostInfo [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
-2023-01-12 16:03:03,214 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource Config resource 'class path resource [application.yaml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
-2023-01-12 16:03:03,784 [main] INFO  [c.u.j.filter.DefaultLazyPropertyFilter] DefaultLazyPropertyFilter.java:31 - Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
-2023-01-12 16:03:04,286 [main] INFO  [c.u.j.resolver.DefaultLazyPropertyResolver] DefaultLazyPropertyResolver.java:31 - Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
-2023-01-12 16:03:04,288 [main] INFO  [c.u.j.detector.DefaultLazyPropertyDetector] DefaultLazyPropertyDetector.java:30 - Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
-2023-01-12 16:03:04,495 [main] WARN  [io.undertow.websockets.jsr] Bootstrap.java:68 - UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
-2023-01-12 16:03:04,529 [main] INFO  [io.undertow.servlet] ServletContextImpl.java:388 - Initializing Spring embedded WebApplicationContext
-2023-01-12 16:03:04,529 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] ServletWebServerApplicationContext.java:292 - Root WebApplicationContext: initialization completed in 3692 ms
-2023-01-12 16:03:05,816 [main] INFO  [c.alibaba.cloud.sentinel.SentinelWebMvcConfigurer] SentinelWebMvcConfigurer.java:52 - [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
-2023-01-12 16:03:06,572 [main] WARN  [io.springboot.sms.core.SmsClient] SmsClient.java:49 - 阿里云短信通道未配置,短信发送暂不可用
-2023-01-12 16:03:07,058 [main] INFO  [o.s.b.actuate.endpoint.web.EndpointLinksResolver] EndpointLinksResolver.java:58 - Exposing 1 endpoint(s) beneath base path '/actuator'
-2023-01-12 16:03:07,202 [main] INFO  [io.undertow] Undertow.java:120 - starting server: Undertow - 2.2.22.Final
-2023-01-12 16:03:07,208 [main] INFO  [org.xnio] Xnio.java:95 - XNIO version 3.8.7.Final
-2023-01-12 16:03:07,215 [main] INFO  [org.xnio.nio] NioXnio.java:58 - XNIO NIO Implementation Version 3.8.7.Final
-2023-01-12 16:03:07,247 [main] INFO  [org.jboss.threads] Version.java:52 - JBoss Threads version 3.1.0.Final
-2023-01-12 16:03:07,289 [main] INFO  [o.s.boot.web.embedded.undertow.UndertowWebServer] UndertowWebServer.java:119 - Undertow started on port(s) 21106 (http) with context path '/supbuilder'
-2023-01-12 16:03:07,477 [main] INFO  [com.supbuilder.file.FileServiceApplication] StartupInfoLogger.java:61 - Started FileServiceApplication in 7.362 seconds (JVM running for 8.156)
-2023-01-12 16:03:07,725 [RMI TCP Connection(9)-192.168.100.141] INFO  [com.zaxxer.hikari.HikariDataSource] HikariDataSource.java:110 - HikariPool-1 - Starting...
-2023-01-12 16:03:07,965 [RMI TCP Connection(11)-192.168.100.141] INFO  [io.undertow.servlet] ServletContextImpl.java:388 - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-01-12 16:03:07,966 [RMI TCP Connection(11)-192.168.100.141] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:525 - Initializing Servlet 'dispatcherServlet'
-2023-01-12 16:03:07,968 [RMI TCP Connection(11)-192.168.100.141] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:547 - Completed initialization in 2 ms
-2023-01-12 16:03:08,268 [RMI TCP Connection(9)-192.168.100.141] INFO  [com.zaxxer.hikari.HikariDataSource] HikariDataSource.java:123 - HikariPool-1 - Start completed.
-2023-01-12 16:24:54,377 [background-preinit] INFO  [org.hibernate.validator.internal.util.Version] Version.java:21 - HV000001: Hibernate Validator 6.2.5.Final
-2023-01-12 16:24:54,389 [main] INFO  [com.supbuilder.file.FileServiceApplication] StartupInfoLogger.java:55 - Starting FileServiceApplication using Java 1.8.0_291 on DESKTOP-ED18TFD with PID 32392 (C:\Users\矫克清\IdeaProjects\supbuilder\supbuilder-file\supbuilder-file-service\target\classes started by 矫克清 in C:\Users\矫克清\IdeaProjects\supbuilder)
-2023-01-12 16:24:54,389 [main] INFO  [com.supbuilder.file.FileServiceApplication] SpringApplication.java:637 - The following 1 profile is active: "default"
-2023-01-12 16:24:55,946 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:262 - Multiple Spring Data modules found, entering strict repository configuration mode
-2023-01-12 16:24:55,948 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:132 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2023-01-12 16:24:55,968 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:201 - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
-2023-01-12 16:24:56,126 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[com.supbuilder.file]' package. Please check your configuration.
-2023-01-12 16:24:56,185 [main] INFO  [o.springframework.cloud.context.scope.GenericScope] GenericScope.java:283 - BeanFactory id=a01e55ea-977c-3150-8f35-90b21eddd6cd
-2023-01-12 16:24:56,249 [main] INFO  [c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor] EnableEncryptablePropertiesBeanFactoryPostProcessor.java:50 - Post-processing PropertySource instances
-2023-01-12 16:24:56,296 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
-2023-01-12 16:24:56,297 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
-2023-01-12 16:24:56,297 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
-2023-01-12 16:24:56,298 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
-2023-01-12 16:24:56,298 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
-2023-01-12 16:24:56,298 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
-2023-01-12 16:24:56,298 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource cachedrandom [org.springframework.cloud.util.random.CachedRandomPropertySource] to EncryptablePropertySourceWrapper
-2023-01-12 16:24:56,299 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource springCloudClientHostInfo [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
-2023-01-12 16:24:56,299 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource Config resource 'class path resource [application.yaml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
-2023-01-12 16:24:56,354 [main] INFO  [c.u.j.filter.DefaultLazyPropertyFilter] DefaultLazyPropertyFilter.java:31 - Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
-2023-01-12 16:24:56,611 [main] INFO  [c.u.j.resolver.DefaultLazyPropertyResolver] DefaultLazyPropertyResolver.java:31 - Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
-2023-01-12 16:24:56,612 [main] INFO  [c.u.j.detector.DefaultLazyPropertyDetector] DefaultLazyPropertyDetector.java:30 - Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
-2023-01-12 16:24:56,744 [main] WARN  [io.undertow.websockets.jsr] Bootstrap.java:68 - UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
-2023-01-12 16:24:56,765 [main] INFO  [io.undertow.servlet] ServletContextImpl.java:388 - Initializing Spring embedded WebApplicationContext
-2023-01-12 16:24:56,765 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] ServletWebServerApplicationContext.java:292 - Root WebApplicationContext: initialization completed in 2334 ms
-2023-01-12 16:24:57,558 [main] INFO  [c.alibaba.cloud.sentinel.SentinelWebMvcConfigurer] SentinelWebMvcConfigurer.java:52 - [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
-2023-01-12 16:24:58,167 [main] WARN  [io.springboot.sms.core.SmsClient] SmsClient.java:49 - 阿里云短信通道未配置,短信发送暂不可用
-2023-01-12 16:24:58,703 [main] INFO  [o.s.b.actuate.endpoint.web.EndpointLinksResolver] EndpointLinksResolver.java:58 - Exposing 1 endpoint(s) beneath base path '/actuator'
-2023-01-12 16:24:58,857 [main] INFO  [io.undertow] Undertow.java:120 - starting server: Undertow - 2.2.22.Final
-2023-01-12 16:24:58,863 [main] INFO  [org.xnio] Xnio.java:95 - XNIO version 3.8.7.Final
-2023-01-12 16:24:58,869 [main] INFO  [org.xnio.nio] NioXnio.java:58 - XNIO NIO Implementation Version 3.8.7.Final
-2023-01-12 16:24:58,899 [main] INFO  [org.jboss.threads] Version.java:52 - JBoss Threads version 3.1.0.Final
-2023-01-12 16:24:58,960 [main] INFO  [o.s.boot.web.embedded.undertow.UndertowWebServer] UndertowWebServer.java:119 - Undertow started on port(s) 21106 (http) with context path '/supbuilder'
-2023-01-12 16:24:59,142 [main] INFO  [com.supbuilder.file.FileServiceApplication] StartupInfoLogger.java:61 - Started FileServiceApplication in 5.468 seconds (JVM running for 6.661)
-2023-01-12 16:24:59,695 [RMI TCP Connection(1)-192.168.100.141] INFO  [io.undertow.servlet] ServletContextImpl.java:388 - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-01-12 16:24:59,696 [RMI TCP Connection(1)-192.168.100.141] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:525 - Initializing Servlet 'dispatcherServlet'
-2023-01-12 16:24:59,697 [RMI TCP Connection(1)-192.168.100.141] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:547 - Completed initialization in 1 ms
-2023-01-12 16:25:00,040 [RMI TCP Connection(4)-192.168.100.141] INFO  [com.zaxxer.hikari.HikariDataSource] HikariDataSource.java:110 - HikariPool-1 - Starting...
-2023-01-12 16:25:00,870 [RMI TCP Connection(4)-192.168.100.141] INFO  [com.zaxxer.hikari.HikariDataSource] HikariDataSource.java:123 - HikariPool-1 - Start completed.
-2023-01-12 16:26:14,198 [XNIO-1 task-1] ERROR [c.s.c.f.sentinel.handle.GlobalBizExceptionHandler] GlobalBizExceptionHandler.java:41 - 全局异常信息 ex=Request method 'GET' not supported
-org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
-	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:256)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:442)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:383)
-	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:125)
-	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:67)
-	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:498)
-	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1265)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1047)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:645)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:750)
-	at io.undertow.servlet.handlers.ServletHandler.handleRequest(ServletHandler.java:74)
-	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:129)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
-	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
-	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
-	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
-	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
-	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
-	at io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84)
-	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
-	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:68)
-	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
-	at io.undertow.servlet.handlers.RedirectDirHandler.handleRequest(RedirectDirHandler.java:68)
-	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:117)
-	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
-	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
-	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
-	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
-	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
-	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
-	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
-	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
-	at io.undertow.servlet.handlers.SendErrorPageHandler.handleRequest(SendErrorPageHandler.java:52)
-	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
-	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:275)
-	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:79)
-	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:134)
-	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:131)
-	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
-	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
-	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:255)
-	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:79)
-	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:100)
-	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:393)
-	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:852)
-	at org.jboss.threads.ContextClassLoaderSavingRunnable.run(ContextClassLoaderSavingRunnable.java:35)
-	at org.jboss.threads.EnhancedQueueExecutor.safeRun(EnhancedQueueExecutor.java:2019)
-	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.doRunTask(EnhancedQueueExecutor.java:1558)
-	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1423)
-	at org.xnio.XnioWorker$WorkerThreadFactory$1$1.run(XnioWorker.java:1282)
+2023-01-13 11:16:25,777 [lettuce-eventExecutorLoop-1-6] INFO  [io.lettuce.core.protocol.ConnectionWatchdog] AbstractInternalLogger.java:171 - Reconnecting, last destination was /192.168.100.202:6379
+2023-01-13 11:16:25,777 [lettuce-eventExecutorLoop-1-7] INFO  [io.lettuce.core.protocol.ConnectionWatchdog] AbstractInternalLogger.java:171 - Reconnecting, last destination was /192.168.100.202:6379
+2023-01-13 11:16:26,396 [lettuce-nioEventLoop-4-3] INFO  [io.lettuce.core.protocol.ReconnectionHandler] ReconnectionHandler.java:174 - Reconnected to 192.168.100.202:6379
+2023-01-13 11:16:26,423 [lettuce-nioEventLoop-4-4] INFO  [io.lettuce.core.protocol.ReconnectionHandler] ReconnectionHandler.java:174 - Reconnected to 192.168.100.202:6379
+2023-01-13 11:16:36,645 [lettuce-nioEventLoop-4-4] INFO  [io.lettuce.core.protocol.CommandHandler] AbstractInternalLogger.java:217 - null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:259)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
 	at java.lang.Thread.run(Thread.java:748)
-2023-01-12 16:37:17,152 [background-preinit] INFO  [org.hibernate.validator.internal.util.Version] Version.java:21 - HV000001: Hibernate Validator 6.2.5.Final
-2023-01-12 16:37:17,162 [main] INFO  [com.supbuilder.file.FileServiceApplication] StartupInfoLogger.java:55 - Starting FileServiceApplication using Java 1.8.0_291 on DESKTOP-ED18TFD with PID 30628 (C:\Users\矫克清\IdeaProjects\supbuilder\supbuilder-file\supbuilder-file-service\target\classes started by 矫克清 in C:\Users\矫克清\IdeaProjects\supbuilder)
-2023-01-12 16:37:17,163 [main] INFO  [com.supbuilder.file.FileServiceApplication] SpringApplication.java:637 - The following 1 profile is active: "default"
-2023-01-12 16:37:18,213 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:262 - Multiple Spring Data modules found, entering strict repository configuration mode
-2023-01-12 16:37:18,215 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:132 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2023-01-12 16:37:18,234 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:201 - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
-2023-01-12 16:37:18,386 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[com.supbuilder.file]' package. Please check your configuration.
-2023-01-12 16:37:18,444 [main] INFO  [o.springframework.cloud.context.scope.GenericScope] GenericScope.java:283 - BeanFactory id=a01e55ea-977c-3150-8f35-90b21eddd6cd
-2023-01-12 16:37:18,490 [main] INFO  [c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor] EnableEncryptablePropertiesBeanFactoryPostProcessor.java:50 - Post-processing PropertySource instances
-2023-01-12 16:37:18,537 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
-2023-01-12 16:37:18,538 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
-2023-01-12 16:37:18,538 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
-2023-01-12 16:37:18,539 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
-2023-01-12 16:37:18,539 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
-2023-01-12 16:37:18,539 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
-2023-01-12 16:37:18,539 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource cachedrandom [org.springframework.cloud.util.random.CachedRandomPropertySource] to EncryptablePropertySourceWrapper
-2023-01-12 16:37:18,539 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource springCloudClientHostInfo [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
-2023-01-12 16:37:18,539 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource Config resource 'class path resource [application.yaml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
-2023-01-12 16:37:18,597 [main] INFO  [c.u.j.filter.DefaultLazyPropertyFilter] DefaultLazyPropertyFilter.java:31 - Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
-2023-01-12 16:37:18,873 [main] INFO  [c.u.j.resolver.DefaultLazyPropertyResolver] DefaultLazyPropertyResolver.java:31 - Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
-2023-01-12 16:37:18,874 [main] INFO  [c.u.j.detector.DefaultLazyPropertyDetector] DefaultLazyPropertyDetector.java:30 - Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
-2023-01-12 16:37:19,004 [main] WARN  [io.undertow.websockets.jsr] Bootstrap.java:68 - UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
-2023-01-12 16:37:19,023 [main] INFO  [io.undertow.servlet] ServletContextImpl.java:388 - Initializing Spring embedded WebApplicationContext
-2023-01-12 16:37:19,024 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] ServletWebServerApplicationContext.java:292 - Root WebApplicationContext: initialization completed in 1820 ms
-2023-01-12 16:37:19,748 [main] INFO  [c.alibaba.cloud.sentinel.SentinelWebMvcConfigurer] SentinelWebMvcConfigurer.java:52 - [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
-2023-01-12 16:37:20,348 [main] WARN  [io.springboot.sms.core.SmsClient] SmsClient.java:49 - 阿里云短信通道未配置,短信发送暂不可用
-2023-01-12 16:37:20,833 [main] INFO  [o.s.b.actuate.endpoint.web.EndpointLinksResolver] EndpointLinksResolver.java:58 - Exposing 1 endpoint(s) beneath base path '/actuator'
-2023-01-12 16:37:20,975 [main] INFO  [io.undertow] Undertow.java:120 - starting server: Undertow - 2.2.22.Final
-2023-01-12 16:37:20,982 [main] INFO  [org.xnio] Xnio.java:95 - XNIO version 3.8.7.Final
-2023-01-12 16:37:20,989 [main] INFO  [org.xnio.nio] NioXnio.java:58 - XNIO NIO Implementation Version 3.8.7.Final
-2023-01-12 16:37:21,019 [main] INFO  [org.jboss.threads] Version.java:52 - JBoss Threads version 3.1.0.Final
-2023-01-12 16:37:21,063 [main] INFO  [o.s.boot.web.embedded.undertow.UndertowWebServer] UndertowWebServer.java:119 - Undertow started on port(s) 21106 (http) with context path '/supbuilder'
-2023-01-12 16:37:21,245 [main] INFO  [com.supbuilder.file.FileServiceApplication] StartupInfoLogger.java:61 - Started FileServiceApplication in 4.816 seconds (JVM running for 5.572)
-2023-01-12 16:37:21,777 [RMI TCP Connection(3)-192.168.100.141] INFO  [com.zaxxer.hikari.HikariDataSource] HikariDataSource.java:110 - HikariPool-1 - Starting...
-2023-01-12 16:37:22,008 [RMI TCP Connection(5)-192.168.100.141] INFO  [io.undertow.servlet] ServletContextImpl.java:388 - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-01-12 16:37:22,008 [RMI TCP Connection(5)-192.168.100.141] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:525 - Initializing Servlet 'dispatcherServlet'
-2023-01-12 16:37:22,010 [RMI TCP Connection(5)-192.168.100.141] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:547 - Completed initialization in 2 ms
-2023-01-12 16:37:22,298 [RMI TCP Connection(3)-192.168.100.141] INFO  [com.zaxxer.hikari.HikariDataSource] HikariDataSource.java:123 - HikariPool-1 - Start completed.
-2023-01-12 16:38:01,829 [XNIO-1 task-1] ERROR [c.s.c.f.sentinel.handle.GlobalBizExceptionHandler] GlobalBizExceptionHandler.java:41 - 全局异常信息 ex=Request method 'GET' not supported
-org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
-	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:256)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:442)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:383)
-	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:125)
-	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:67)
-	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:498)
-	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1265)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1047)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:645)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:750)
-	at io.undertow.servlet.handlers.ServletHandler.handleRequest(ServletHandler.java:74)
-	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:129)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
-	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
-	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
-	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
-	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:67)
-	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
-	at io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84)
-	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
-	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:68)
-	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
-	at io.undertow.servlet.handlers.RedirectDirHandler.handleRequest(RedirectDirHandler.java:68)
-	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:117)
-	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
-	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
-	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
-	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
-	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
-	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
-	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
-	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
-	at io.undertow.servlet.handlers.SendErrorPageHandler.handleRequest(SendErrorPageHandler.java:52)
-	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
-	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:275)
-	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:79)
-	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:134)
-	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:131)
-	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
-	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
-	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:255)
-	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:79)
-	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:100)
-	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:393)
-	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:852)
-	at org.jboss.threads.ContextClassLoaderSavingRunnable.run(ContextClassLoaderSavingRunnable.java:35)
-	at org.jboss.threads.EnhancedQueueExecutor.safeRun(EnhancedQueueExecutor.java:2019)
-	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.doRunTask(EnhancedQueueExecutor.java:1558)
-	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1423)
-	at org.xnio.XnioWorker$WorkerThreadFactory$1$1.run(XnioWorker.java:1282)
+2023-01-13 11:16:36,645 [lettuce-nioEventLoop-4-3] INFO  [io.lettuce.core.protocol.CommandHandler] AbstractInternalLogger.java:217 - null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:259)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
 	at java.lang.Thread.run(Thread.java:748)
-2023-01-12 16:42:39,199 [background-preinit] INFO  [org.hibernate.validator.internal.util.Version] Version.java:21 - HV000001: Hibernate Validator 6.2.5.Final
-2023-01-12 16:42:39,209 [main] INFO  [com.supbuilder.file.FileServiceApplication] StartupInfoLogger.java:55 - Starting FileServiceApplication using Java 1.8.0_291 on DESKTOP-ED18TFD with PID 30996 (C:\Users\矫克清\IdeaProjects\supbuilder\supbuilder-file\supbuilder-file-service\target\classes started by 矫克清 in C:\Users\矫克清\IdeaProjects\supbuilder)
-2023-01-12 16:42:39,210 [main] INFO  [com.supbuilder.file.FileServiceApplication] SpringApplication.java:637 - The following 1 profile is active: "default"
-2023-01-12 16:42:40,203 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:262 - Multiple Spring Data modules found, entering strict repository configuration mode
-2023-01-12 16:42:40,205 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:132 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2023-01-12 16:42:40,224 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:201 - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
-2023-01-12 16:42:40,379 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[com.supbuilder.file]' package. Please check your configuration.
-2023-01-12 16:42:40,438 [main] INFO  [o.springframework.cloud.context.scope.GenericScope] GenericScope.java:283 - BeanFactory id=a01e55ea-977c-3150-8f35-90b21eddd6cd
-2023-01-12 16:42:40,485 [main] INFO  [c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor] EnableEncryptablePropertiesBeanFactoryPostProcessor.java:50 - Post-processing PropertySource instances
-2023-01-12 16:42:40,531 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
-2023-01-12 16:42:40,533 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
-2023-01-12 16:42:40,533 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
-2023-01-12 16:42:40,533 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
-2023-01-12 16:42:40,534 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
-2023-01-12 16:42:40,534 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
-2023-01-12 16:42:40,534 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource cachedrandom [org.springframework.cloud.util.random.CachedRandomPropertySource] to EncryptablePropertySourceWrapper
-2023-01-12 16:42:40,534 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource springCloudClientHostInfo [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
-2023-01-12 16:42:40,534 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource Config resource 'class path resource [application.yaml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
-2023-01-12 16:42:40,592 [main] INFO  [c.u.j.filter.DefaultLazyPropertyFilter] DefaultLazyPropertyFilter.java:31 - Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
-2023-01-12 16:42:40,868 [main] INFO  [c.u.j.resolver.DefaultLazyPropertyResolver] DefaultLazyPropertyResolver.java:31 - Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
-2023-01-12 16:42:40,869 [main] INFO  [c.u.j.detector.DefaultLazyPropertyDetector] DefaultLazyPropertyDetector.java:30 - Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
-2023-01-12 16:42:40,999 [main] WARN  [io.undertow.websockets.jsr] Bootstrap.java:68 - UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
-2023-01-12 16:42:41,020 [main] INFO  [io.undertow.servlet] ServletContextImpl.java:388 - Initializing Spring embedded WebApplicationContext
-2023-01-12 16:42:41,021 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] ServletWebServerApplicationContext.java:292 - Root WebApplicationContext: initialization completed in 1767 ms
-2023-01-12 16:42:41,752 [main] INFO  [c.alibaba.cloud.sentinel.SentinelWebMvcConfigurer] SentinelWebMvcConfigurer.java:52 - [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
-2023-01-12 16:42:42,361 [main] WARN  [io.springboot.sms.core.SmsClient] SmsClient.java:49 - 阿里云短信通道未配置,短信发送暂不可用
-2023-01-12 16:42:42,845 [main] INFO  [o.s.b.actuate.endpoint.web.EndpointLinksResolver] EndpointLinksResolver.java:58 - Exposing 1 endpoint(s) beneath base path '/actuator'
-2023-01-12 16:42:42,991 [main] INFO  [io.undertow] Undertow.java:120 - starting server: Undertow - 2.2.22.Final
-2023-01-12 16:42:42,997 [main] INFO  [org.xnio] Xnio.java:95 - XNIO version 3.8.7.Final
-2023-01-12 16:42:43,004 [main] INFO  [org.xnio.nio] NioXnio.java:58 - XNIO NIO Implementation Version 3.8.7.Final
-2023-01-12 16:42:43,037 [main] INFO  [org.jboss.threads] Version.java:52 - JBoss Threads version 3.1.0.Final
-2023-01-12 16:42:43,081 [main] INFO  [o.s.boot.web.embedded.undertow.UndertowWebServer] UndertowWebServer.java:119 - Undertow started on port(s) 21106 (http) with context path '/supbuilder'
-2023-01-12 16:42:43,262 [main] INFO  [com.supbuilder.file.FileServiceApplication] StartupInfoLogger.java:61 - Started FileServiceApplication in 4.713 seconds (JVM running for 5.45)
-2023-01-12 16:42:43,811 [RMI TCP Connection(1)-192.168.100.141] INFO  [com.zaxxer.hikari.HikariDataSource] HikariDataSource.java:110 - HikariPool-1 - Starting...
-2023-01-12 16:42:44,057 [RMI TCP Connection(3)-192.168.100.141] INFO  [io.undertow.servlet] ServletContextImpl.java:388 - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-01-12 16:42:44,057 [RMI TCP Connection(3)-192.168.100.141] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:525 - Initializing Servlet 'dispatcherServlet'
-2023-01-12 16:42:44,059 [RMI TCP Connection(3)-192.168.100.141] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:547 - Completed initialization in 1 ms
-2023-01-12 16:42:44,363 [RMI TCP Connection(1)-192.168.100.141] INFO  [com.zaxxer.hikari.HikariDataSource] HikariDataSource.java:123 - HikariPool-1 - Start completed.
+2023-01-13 11:16:36,702 [lettuce-eventExecutorLoop-1-1] INFO  [io.lettuce.core.protocol.ConnectionWatchdog] AbstractInternalLogger.java:171 - Reconnecting, last destination was /192.168.100.202:6379
+2023-01-13 11:16:36,710 [lettuce-eventExecutorLoop-1-8] INFO  [io.lettuce.core.protocol.ConnectionWatchdog] AbstractInternalLogger.java:171 - Reconnecting, last destination was /192.168.100.202:6379
+2023-01-13 11:16:46,817 [lettuce-nioEventLoop-4-6] WARN  [io.lettuce.core.protocol.ConnectionWatchdog] AbstractInternalLogger.java:151 - Cannot reconnect to [192.168.100.202:6379]: connection timed out: /192.168.100.202:6379
+2023-01-13 11:16:46,817 [lettuce-nioEventLoop-4-5] WARN  [io.lettuce.core.protocol.ConnectionWatchdog] AbstractInternalLogger.java:151 - Cannot reconnect to [192.168.100.202:6379]: connection timed out: /192.168.100.202:6379
+2023-01-13 11:16:46,899 [lettuce-eventExecutorLoop-1-3] INFO  [io.lettuce.core.protocol.ConnectionWatchdog] AbstractInternalLogger.java:171 - Reconnecting, last destination was 192.168.100.202:6379
+2023-01-13 11:16:46,899 [lettuce-eventExecutorLoop-1-2] INFO  [io.lettuce.core.protocol.ConnectionWatchdog] AbstractInternalLogger.java:171 - Reconnecting, last destination was 192.168.100.202:6379
+2023-01-13 11:16:46,928 [lettuce-nioEventLoop-4-7] INFO  [io.lettuce.core.protocol.ReconnectionHandler] ReconnectionHandler.java:174 - Reconnected to 192.168.100.202:6379
+2023-01-13 11:16:47,927 [lettuce-nioEventLoop-4-8] INFO  [io.lettuce.core.protocol.ReconnectionHandler] ReconnectionHandler.java:174 - Reconnected to 192.168.100.202:6379
+2023-01-13 15:40:34,631 [background-preinit] INFO  [org.hibernate.validator.internal.util.Version] Version.java:21 - HV000001: Hibernate Validator 6.2.5.Final
+2023-01-13 15:40:34,895 [main] INFO  [com.supbuilder.file.FileServiceApplication] StartupInfoLogger.java:55 - Starting FileServiceApplication using Java 1.8.0_291 on DESKTOP-ED18TFD with PID 29396 (C:\Users\矫克清\IdeaProjects\supbuilder\supbuilder-file\supbuilder-file-service\target\classes started by 矫克清 in C:\Users\矫克清\IdeaProjects\supbuilder)
+2023-01-13 15:40:34,895 [main] INFO  [com.supbuilder.file.FileServiceApplication] SpringApplication.java:637 - The following 1 profile is active: "default"
+2023-01-13 15:40:52,111 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:262 - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-01-13 15:40:52,114 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:132 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-01-13 15:40:52,313 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:201 - Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+2023-01-13 15:40:53,691 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[com.supbuilder.file]' package. Please check your configuration.
+2023-01-13 15:40:53,907 [main] INFO  [o.springframework.cloud.context.scope.GenericScope] GenericScope.java:283 - BeanFactory id=a01e55ea-977c-3150-8f35-90b21eddd6cd
+2023-01-13 15:40:54,355 [main] INFO  [c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor] EnableEncryptablePropertiesBeanFactoryPostProcessor.java:50 - Post-processing PropertySource instances
+2023-01-13 15:40:55,074 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2023-01-13 15:40:55,075 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-01-13 15:40:55,075 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-01-13 15:40:55,076 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2023-01-13 15:40:55,076 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2023-01-13 15:40:55,076 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2023-01-13 15:40:55,076 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource cachedrandom [org.springframework.cloud.util.random.CachedRandomPropertySource] to EncryptablePropertySourceWrapper
+2023-01-13 15:40:55,077 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource springCloudClientHostInfo [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-01-13 15:40:55,077 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource Config resource 'class path resource [application.yaml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-01-13 15:40:55,359 [main] INFO  [c.u.j.filter.DefaultLazyPropertyFilter] DefaultLazyPropertyFilter.java:31 - Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2023-01-13 15:40:56,861 [main] INFO  [c.u.j.resolver.DefaultLazyPropertyResolver] DefaultLazyPropertyResolver.java:31 - Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2023-01-13 15:40:56,863 [main] INFO  [c.u.j.detector.DefaultLazyPropertyDetector] DefaultLazyPropertyDetector.java:30 - Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2023-01-13 15:40:58,649 [main] WARN  [io.undertow.websockets.jsr] Bootstrap.java:68 - UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-01-13 15:40:58,813 [main] INFO  [io.undertow.servlet] ServletContextImpl.java:388 - Initializing Spring embedded WebApplicationContext
+2023-01-13 15:40:58,813 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] ServletWebServerApplicationContext.java:292 - Root WebApplicationContext: initialization completed in 22187 ms
+2023-01-13 15:41:07,907 [main] INFO  [c.alibaba.cloud.sentinel.SentinelWebMvcConfigurer] SentinelWebMvcConfigurer.java:52 - [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+2023-01-13 15:41:09,913 [main] WARN  [io.springboot.sms.core.SmsClient] SmsClient.java:49 - 阿里云短信通道未配置,短信发送暂不可用
+2023-01-13 15:41:11,589 [main] INFO  [o.s.b.actuate.endpoint.web.EndpointLinksResolver] EndpointLinksResolver.java:58 - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-13 15:41:12,234 [main] INFO  [io.undertow] Undertow.java:120 - starting server: Undertow - 2.2.22.Final
+2023-01-13 15:41:12,289 [main] INFO  [org.xnio] Xnio.java:95 - XNIO version 3.8.7.Final
+2023-01-13 15:41:12,296 [main] INFO  [org.xnio.nio] NioXnio.java:58 - XNIO NIO Implementation Version 3.8.7.Final
+2023-01-13 15:41:12,414 [main] INFO  [org.jboss.threads] Version.java:52 - JBoss Threads version 3.1.0.Final
+2023-01-13 15:41:12,466 [main] INFO  [o.s.boot.web.embedded.undertow.UndertowWebServer] UndertowWebServer.java:119 - Undertow started on port(s) 21106 (http) with context path '/supbuilder'
+2023-01-13 15:41:12,699 [main] INFO  [com.supbuilder.file.FileServiceApplication] StartupInfoLogger.java:61 - Started FileServiceApplication in 49.639 seconds (JVM running for 56.603)
+2023-01-13 15:41:17,929 [RMI TCP Connection(1)-192.168.100.141] INFO  [com.zaxxer.hikari.HikariDataSource] HikariDataSource.java:110 - HikariPool-1 - Starting...
+2023-01-13 15:41:18,085 [RMI TCP Connection(3)-192.168.100.141] INFO  [io.undertow.servlet] ServletContextImpl.java:388 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-13 15:41:18,085 [RMI TCP Connection(3)-192.168.100.141] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:525 - Initializing Servlet 'dispatcherServlet'
+2023-01-13 15:41:18,087 [RMI TCP Connection(3)-192.168.100.141] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:547 - Completed initialization in 2 ms
+2023-01-13 15:41:19,376 [RMI TCP Connection(1)-192.168.100.141] INFO  [com.zaxxer.hikari.HikariDataSource] HikariDataSource.java:123 - HikariPool-1 - Start completed.
+2023-01-13 16:00:17,277 [background-preinit] INFO  [org.hibernate.validator.internal.util.Version] Version.java:21 - HV000001: Hibernate Validator 6.2.5.Final
+2023-01-13 16:00:17,293 [main] INFO  [com.supbuilder.file.FileServiceApplication] StartupInfoLogger.java:55 - Starting FileServiceApplication using Java 1.8.0_291 on DESKTOP-ED18TFD with PID 35368 (C:\Users\矫克清\IdeaProjects\supbuilder\supbuilder-file\supbuilder-file-service\target\classes started by 矫克清 in C:\Users\矫克清\IdeaProjects\supbuilder)
+2023-01-13 16:00:17,293 [main] INFO  [com.supbuilder.file.FileServiceApplication] SpringApplication.java:637 - The following 1 profile is active: "default"
+2023-01-13 16:00:20,550 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:262 - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-01-13 16:00:20,552 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:132 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-01-13 16:00:20,573 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:201 - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+2023-01-13 16:00:20,733 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[com.supbuilder.file]' package. Please check your configuration.
+2023-01-13 16:00:20,796 [main] INFO  [o.springframework.cloud.context.scope.GenericScope] GenericScope.java:283 - BeanFactory id=a01e55ea-977c-3150-8f35-90b21eddd6cd
+2023-01-13 16:00:20,866 [main] INFO  [c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor] EnableEncryptablePropertiesBeanFactoryPostProcessor.java:50 - Post-processing PropertySource instances
+2023-01-13 16:00:20,915 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2023-01-13 16:00:20,916 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-01-13 16:00:20,916 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-01-13 16:00:20,917 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2023-01-13 16:00:20,917 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2023-01-13 16:00:20,917 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2023-01-13 16:00:20,917 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource cachedrandom [org.springframework.cloud.util.random.CachedRandomPropertySource] to EncryptablePropertySourceWrapper
+2023-01-13 16:00:20,918 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource springCloudClientHostInfo [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-01-13 16:00:20,918 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource Config resource 'class path resource [application.yaml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-01-13 16:00:20,975 [main] INFO  [c.u.j.filter.DefaultLazyPropertyFilter] DefaultLazyPropertyFilter.java:31 - Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2023-01-13 16:00:21,280 [main] INFO  [c.u.j.resolver.DefaultLazyPropertyResolver] DefaultLazyPropertyResolver.java:31 - Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2023-01-13 16:00:21,282 [main] INFO  [c.u.j.detector.DefaultLazyPropertyDetector] DefaultLazyPropertyDetector.java:30 - Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2023-01-13 16:00:21,418 [main] WARN  [io.undertow.websockets.jsr] Bootstrap.java:68 - UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-01-13 16:00:21,441 [main] INFO  [io.undertow.servlet] ServletContextImpl.java:388 - Initializing Spring embedded WebApplicationContext
+2023-01-13 16:00:21,442 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] ServletWebServerApplicationContext.java:292 - Root WebApplicationContext: initialization completed in 4100 ms
+2023-01-13 16:00:22,231 [main] INFO  [c.alibaba.cloud.sentinel.SentinelWebMvcConfigurer] SentinelWebMvcConfigurer.java:52 - [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+2023-01-13 16:00:23,068 [main] WARN  [io.springboot.sms.core.SmsClient] SmsClient.java:49 - 阿里云短信通道未配置,短信发送暂不可用
+2023-01-13 16:00:23,588 [main] INFO  [o.s.b.actuate.endpoint.web.EndpointLinksResolver] EndpointLinksResolver.java:58 - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-13 16:00:23,788 [main] INFO  [io.undertow] Undertow.java:120 - starting server: Undertow - 2.2.22.Final
+2023-01-13 16:00:23,795 [main] INFO  [org.xnio] Xnio.java:95 - XNIO version 3.8.7.Final
+2023-01-13 16:00:23,801 [main] INFO  [org.xnio.nio] NioXnio.java:58 - XNIO NIO Implementation Version 3.8.7.Final
+2023-01-13 16:00:23,833 [main] INFO  [org.jboss.threads] Version.java:52 - JBoss Threads version 3.1.0.Final
+2023-01-13 16:00:23,939 [main] INFO  [o.s.boot.web.embedded.undertow.UndertowWebServer] UndertowWebServer.java:119 - Undertow started on port(s) 21106 (http) with context path '/supbuilder'
+2023-01-13 16:00:24,129 [main] INFO  [com.supbuilder.file.FileServiceApplication] StartupInfoLogger.java:61 - Started FileServiceApplication in 7.661 seconds (JVM running for 9.106)
+2023-01-13 16:00:24,596 [RMI TCP Connection(2)-192.168.100.141] INFO  [io.undertow.servlet] ServletContextImpl.java:388 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-13 16:00:24,596 [RMI TCP Connection(2)-192.168.100.141] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:525 - Initializing Servlet 'dispatcherServlet'
+2023-01-13 16:00:24,599 [RMI TCP Connection(2)-192.168.100.141] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:547 - Completed initialization in 2 ms
+2023-01-13 16:00:24,617 [RMI TCP Connection(3)-192.168.100.141] INFO  [com.zaxxer.hikari.HikariDataSource] HikariDataSource.java:110 - HikariPool-1 - Starting...
+2023-01-13 16:00:25,360 [RMI TCP Connection(3)-192.168.100.141] INFO  [com.zaxxer.hikari.HikariDataSource] HikariDataSource.java:123 - HikariPool-1 - Start completed.
+2023-01-13 16:34:05,572 [background-preinit] INFO  [org.hibernate.validator.internal.util.Version] Version.java:21 - HV000001: Hibernate Validator 6.2.5.Final
+2023-01-13 16:34:05,586 [main] INFO  [com.supbuilder.file.FileServiceApplication] StartupInfoLogger.java:55 - Starting FileServiceApplication using Java 1.8.0_291 on DESKTOP-ED18TFD with PID 24268 (C:\Users\矫克清\IdeaProjects\supbuilder\supbuilder-file\supbuilder-file-service\target\classes started by 矫克清 in C:\Users\矫克清\IdeaProjects\supbuilder)
+2023-01-13 16:34:05,587 [main] INFO  [com.supbuilder.file.FileServiceApplication] SpringApplication.java:637 - The following 1 profile is active: "default"
+2023-01-13 16:34:06,915 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:262 - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-01-13 16:34:06,917 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:132 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-01-13 16:34:06,943 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:201 - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+2023-01-13 16:34:07,174 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[com.supbuilder.file]' package. Please check your configuration.
+2023-01-13 16:34:07,249 [main] INFO  [o.springframework.cloud.context.scope.GenericScope] GenericScope.java:283 - BeanFactory id=a01e55ea-977c-3150-8f35-90b21eddd6cd
+2023-01-13 16:34:07,307 [main] INFO  [c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor] EnableEncryptablePropertiesBeanFactoryPostProcessor.java:50 - Post-processing PropertySource instances
+2023-01-13 16:34:07,364 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2023-01-13 16:34:07,366 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-01-13 16:34:07,366 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-01-13 16:34:07,367 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2023-01-13 16:34:07,368 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2023-01-13 16:34:07,368 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2023-01-13 16:34:07,368 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource cachedrandom [org.springframework.cloud.util.random.CachedRandomPropertySource] to EncryptablePropertySourceWrapper
+2023-01-13 16:34:07,368 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource springCloudClientHostInfo [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-01-13 16:34:07,368 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource Config resource 'class path resource [application.yaml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-01-13 16:34:07,443 [main] INFO  [c.u.j.filter.DefaultLazyPropertyFilter] DefaultLazyPropertyFilter.java:31 - Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2023-01-13 16:34:07,849 [main] INFO  [c.u.j.resolver.DefaultLazyPropertyResolver] DefaultLazyPropertyResolver.java:31 - Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2023-01-13 16:34:07,850 [main] INFO  [c.u.j.detector.DefaultLazyPropertyDetector] DefaultLazyPropertyDetector.java:30 - Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2023-01-13 16:34:07,997 [main] WARN  [io.undertow.websockets.jsr] Bootstrap.java:68 - UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-01-13 16:34:08,022 [main] INFO  [io.undertow.servlet] ServletContextImpl.java:388 - Initializing Spring embedded WebApplicationContext
+2023-01-13 16:34:08,023 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] ServletWebServerApplicationContext.java:292 - Root WebApplicationContext: initialization completed in 2384 ms
+2023-01-13 16:34:08,947 [main] INFO  [c.alibaba.cloud.sentinel.SentinelWebMvcConfigurer] SentinelWebMvcConfigurer.java:52 - [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+2023-01-13 16:34:09,775 [main] WARN  [io.springboot.sms.core.SmsClient] SmsClient.java:49 - 阿里云短信通道未配置,短信发送暂不可用
+2023-01-13 16:34:10,280 [main] INFO  [o.s.b.actuate.endpoint.web.EndpointLinksResolver] EndpointLinksResolver.java:58 - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-13 16:34:10,432 [main] INFO  [io.undertow] Undertow.java:120 - starting server: Undertow - 2.2.22.Final
+2023-01-13 16:34:10,438 [main] INFO  [org.xnio] Xnio.java:95 - XNIO version 3.8.7.Final
+2023-01-13 16:34:10,446 [main] INFO  [org.xnio.nio] NioXnio.java:58 - XNIO NIO Implementation Version 3.8.7.Final
+2023-01-13 16:34:10,478 [main] INFO  [org.jboss.threads] Version.java:52 - JBoss Threads version 3.1.0.Final
+2023-01-13 16:34:10,521 [main] INFO  [o.s.boot.web.embedded.undertow.UndertowWebServer] UndertowWebServer.java:119 - Undertow started on port(s) 21106 (http) with context path '/supbuilder'
+2023-01-13 16:34:10,707 [main] INFO  [com.supbuilder.file.FileServiceApplication] StartupInfoLogger.java:61 - Started FileServiceApplication in 5.917 seconds (JVM running for 6.863)
+2023-01-13 16:34:11,222 [RMI TCP Connection(1)-192.168.100.141] INFO  [io.undertow.servlet] ServletContextImpl.java:388 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-13 16:34:11,222 [RMI TCP Connection(1)-192.168.100.141] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:525 - Initializing Servlet 'dispatcherServlet'
+2023-01-13 16:34:11,224 [RMI TCP Connection(1)-192.168.100.141] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:547 - Completed initialization in 2 ms
+2023-01-13 16:34:11,250 [RMI TCP Connection(2)-192.168.100.141] INFO  [com.zaxxer.hikari.HikariDataSource] HikariDataSource.java:110 - HikariPool-1 - Starting...
+2023-01-13 16:34:11,920 [RMI TCP Connection(2)-192.168.100.141] INFO  [com.zaxxer.hikari.HikariDataSource] HikariDataSource.java:123 - HikariPool-1 - Start completed.
+2023-01-13 16:38:38,073 [background-preinit] INFO  [org.hibernate.validator.internal.util.Version] Version.java:21 - HV000001: Hibernate Validator 6.2.5.Final
+2023-01-13 16:38:38,087 [main] INFO  [com.supbuilder.file.FileServiceApplication] StartupInfoLogger.java:55 - Starting FileServiceApplication using Java 1.8.0_291 on DESKTOP-ED18TFD with PID 3068 (C:\Users\矫克清\IdeaProjects\supbuilder\supbuilder-file\supbuilder-file-service\target\classes started by 矫克清 in C:\Users\矫克清\IdeaProjects\supbuilder)
+2023-01-13 16:38:38,087 [main] INFO  [com.supbuilder.file.FileServiceApplication] SpringApplication.java:637 - The following 1 profile is active: "default"
+2023-01-13 16:38:39,096 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:262 - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-01-13 16:38:39,097 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:132 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-01-13 16:38:39,117 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:201 - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+2023-01-13 16:38:39,273 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[com.supbuilder.file]' package. Please check your configuration.
+2023-01-13 16:38:39,333 [main] INFO  [o.springframework.cloud.context.scope.GenericScope] GenericScope.java:283 - BeanFactory id=a01e55ea-977c-3150-8f35-90b21eddd6cd
+2023-01-13 16:38:39,381 [main] INFO  [c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor] EnableEncryptablePropertiesBeanFactoryPostProcessor.java:50 - Post-processing PropertySource instances
+2023-01-13 16:38:39,430 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2023-01-13 16:38:39,431 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-01-13 16:38:39,431 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-01-13 16:38:39,432 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2023-01-13 16:38:39,432 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2023-01-13 16:38:39,432 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2023-01-13 16:38:39,432 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource cachedrandom [org.springframework.cloud.util.random.CachedRandomPropertySource] to EncryptablePropertySourceWrapper
+2023-01-13 16:38:39,432 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource springCloudClientHostInfo [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-01-13 16:38:39,433 [main] INFO  [c.u.j.EncryptablePropertySourceConverter] EncryptablePropertySourceConverter.java:38 - Converting PropertySource Config resource 'class path resource [application.yaml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-01-13 16:38:39,490 [main] INFO  [c.u.j.filter.DefaultLazyPropertyFilter] DefaultLazyPropertyFilter.java:31 - Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2023-01-13 16:38:39,775 [main] INFO  [c.u.j.resolver.DefaultLazyPropertyResolver] DefaultLazyPropertyResolver.java:31 - Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2023-01-13 16:38:39,777 [main] INFO  [c.u.j.detector.DefaultLazyPropertyDetector] DefaultLazyPropertyDetector.java:30 - Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2023-01-13 16:38:39,907 [main] WARN  [io.undertow.websockets.jsr] Bootstrap.java:68 - UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-01-13 16:38:39,928 [main] INFO  [io.undertow.servlet] ServletContextImpl.java:388 - Initializing Spring embedded WebApplicationContext
+2023-01-13 16:38:39,928 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] ServletWebServerApplicationContext.java:292 - Root WebApplicationContext: initialization completed in 1797 ms
+2023-01-13 16:38:40,671 [main] INFO  [c.alibaba.cloud.sentinel.SentinelWebMvcConfigurer] SentinelWebMvcConfigurer.java:52 - [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+2023-01-13 16:38:41,300 [main] WARN  [io.springboot.sms.core.SmsClient] SmsClient.java:49 - 阿里云短信通道未配置,短信发送暂不可用
+2023-01-13 16:38:41,789 [main] INFO  [o.s.b.actuate.endpoint.web.EndpointLinksResolver] EndpointLinksResolver.java:58 - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-13 16:38:41,936 [main] INFO  [io.undertow] Undertow.java:120 - starting server: Undertow - 2.2.22.Final
+2023-01-13 16:38:41,942 [main] INFO  [org.xnio] Xnio.java:95 - XNIO version 3.8.7.Final
+2023-01-13 16:38:41,949 [main] INFO  [org.xnio.nio] NioXnio.java:58 - XNIO NIO Implementation Version 3.8.7.Final
+2023-01-13 16:38:41,980 [main] INFO  [org.jboss.threads] Version.java:52 - JBoss Threads version 3.1.0.Final
+2023-01-13 16:38:42,021 [main] INFO  [o.s.boot.web.embedded.undertow.UndertowWebServer] UndertowWebServer.java:119 - Undertow started on port(s) 21106 (http) with context path '/supbuilder'
+2023-01-13 16:38:42,206 [main] INFO  [com.supbuilder.file.FileServiceApplication] StartupInfoLogger.java:61 - Started FileServiceApplication in 4.978 seconds (JVM running for 5.972)
+2023-01-13 16:38:42,361 [RMI TCP Connection(2)-192.168.100.141] INFO  [io.undertow.servlet] ServletContextImpl.java:388 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-13 16:38:42,361 [RMI TCP Connection(2)-192.168.100.141] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:525 - Initializing Servlet 'dispatcherServlet'
+2023-01-13 16:38:42,363 [RMI TCP Connection(2)-192.168.100.141] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:547 - Completed initialization in 2 ms
+2023-01-13 16:38:42,379 [RMI TCP Connection(1)-192.168.100.141] INFO  [com.zaxxer.hikari.HikariDataSource] HikariDataSource.java:110 - HikariPool-1 - Starting...
+2023-01-13 16:38:43,002 [RMI TCP Connection(1)-192.168.100.141] INFO  [com.zaxxer.hikari.HikariDataSource] HikariDataSource.java:123 - HikariPool-1 - Start completed.

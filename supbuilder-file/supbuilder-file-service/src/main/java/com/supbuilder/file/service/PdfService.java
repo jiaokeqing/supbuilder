@@ -2,6 +2,8 @@ package com.supbuilder.file.service;
 
 import org.springframework.web.multipart.MultipartFile;
 
+import java.util.List;
+
 public interface PdfService {
     void toWord(MultipartFile pdfFile,String fileId);
 
@@ -38,4 +40,11 @@ public interface PdfService {
      * @param fileId
      */
     void toHtml(MultipartFile pdfFile,String fileId);
+
+    /**
+     * pdf合并
+     * @param pdfFiles
+     * @param fileId
+     */
+    void pdfMerge(MultipartFile[] pdfFiles, String fileId);
 }

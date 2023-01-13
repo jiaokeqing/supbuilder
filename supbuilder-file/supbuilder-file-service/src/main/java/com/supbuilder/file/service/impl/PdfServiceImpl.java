@@ -22,6 +22,8 @@ import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class PdfServiceImpl implements PdfService {
@@ -217,6 +219,40 @@ public class PdfServiceImpl implements PdfService {
             String downloadUrl = converseDownLoadUrl + timeDir + name + FileTypeSuffixConstants.HTML_SUFFIX;
 
             converseService.pdf2Html(sourceFile, targetFile, downloadUrl, fileId);
+
+
+            FileHandleVO fileHandleVO = new FileHandleVO(fileId, null, FileStatusEnum.ING, "文件正在处理，请稍等...");
+            //处理结果
+            redisUtil.hset(FileHandleTypeConstants.FILE_CONVERSE, fileId, fileHandleVO, 1800);
+
+
+        } catch (Exception e) {
+
+            e.printStackTrace();
+            FileHandleVO fileHandleVO = new FileHandleVO(fileId, null, FileStatusEnum.FAIL, "文件处理失败");
+            redisUtil.hset(FileHandleTypeConstants.FILE_CONVERSE, fileId, fileHandleVO, 1800);
+        }
+    }
+
+    @Override
+    public void pdfMerge(MultipartFile[] pdfFiles, String fileId) {
+        String timeDir = System.currentTimeMillis() + File.separator;
+        try {
+            //创建转换目录
+            Path converseDir = Paths.get(conversedResultPath + timeDir);
+            Files.createDirectory(converseDir);
+
+            List<String> sourceFiles=new ArrayList<>();
+            String sourceFile = null;
+            for (MultipartFile pdfFile:pdfFiles){
+                sourceFile = UploadFileUtil.uploadFile(pdfFile, converseUploadPath + timeDir);
+                sourceFiles.add(sourceFile);
+            }
+            String name = System.currentTimeMillis()+"";
+            String targetFile = conversedResultPath + timeDir + name + FileTypeSuffixConstants.PDF_SUFFIX;
+            String downloadUrl = converseDownLoadUrl + timeDir + name + FileTypeSuffixConstants.PDF_SUFFIX;
+
+            converseService.pdfMerge(sourceFiles, targetFile, downloadUrl, fileId);
 
 
             FileHandleVO fileHandleVO = new FileHandleVO(fileId, null, FileStatusEnum.ING, "文件正在处理，请稍等...");
